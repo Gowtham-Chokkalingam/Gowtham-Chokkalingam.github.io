@@ -12,13 +12,13 @@ const NavBar = () => {
   return (
     <div className="flex justify-between items-center w-full h-16 text-white bg-black px-4 fixed">
       <div>
-        <h1 className="text-2xl font-title ml-2 hover:scale-105 hover:text-purple-400 duration-200">Gowtham</h1>
+        <h1 className="text-2xl font-title ml-2 hover:scale-105 hover:text-blue-400 duration-200">Gowtham</h1>
       </div>
       <ul className="hidden md:flex">
         {links.map(({ id, link }) => (
           <li
             key={id}
-            className="px-4 font-title cursor-pointer capitalize font-medium text-gray-200 hover:scale-105 hover:text-purple-400 duration-200"
+            className="px-4 font-title cursor-pointer capitalize font-medium text-gray-200 hover:scale-105 hover:text-blue-400 duration-200"
           >
             {link}
           </li>
@@ -31,7 +31,7 @@ const NavBar = () => {
       {nav && (
         <ul className="flex flex-col justify-center absolute top-0 right-0 w-60 h-screen bg-gradient-to-b from-black to-gray-800 text-gray-200">
           {links.map(({ id, link }) => (
-            <li key={id} className="px-4 text-2xl cursor-pointer capitalize py-6 hover:text-purple-500">
+            <li key={id} className="px-4 text-2xl cursor-pointer capitalize py-6 hover:text-blue-500">
               {link}
             </li>
           ))}
