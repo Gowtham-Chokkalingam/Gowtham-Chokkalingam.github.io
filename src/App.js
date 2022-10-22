@@ -9,11 +9,9 @@ function App() {
       <NavBar></NavBar>
       <Home></Home>
 
-      
       <SocialLinks></SocialLinks>
     </div>
   );
 }
 
 export default App;
-
