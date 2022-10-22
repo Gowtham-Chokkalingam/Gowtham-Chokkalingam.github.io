@@ -4,7 +4,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Home = () => {
   return (
-    <div name="home" className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 z-10">
+    <div name="home" className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 ">
       <div className="max-w-screen-lg mx-auto flex flex-col-reverse items-center justify-center  h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center items-center md:items-start h-full">
           <h2 className="text-[1.4rem] text-center sm:text-2xl font-bold text-white md:mt-12">I'm An Aspiring Full Stack Web-Developer</h2>
