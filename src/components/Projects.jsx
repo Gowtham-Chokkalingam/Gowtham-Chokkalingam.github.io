@@ -3,9 +3,7 @@ import React from "react";
 import movieapp from "../assets/portfolio/movieapp.png";
 import travellocity from "../assets/portfolio/travellocity.png";
 import myhours from "../assets/portfolio/myhours.png";
-import navbar from "../assets/portfolio/navbar.jpg";
-import reactParallax from "../assets/portfolio/reactParallax.jpg";
-import reactWeather from "../assets/portfolio/reactWeather.jpg";
+import foodapp from "../assets/portfolio/foodapp.png";
 
 const Projects = () => {
   const projects = [
@@ -13,7 +11,7 @@ const Projects = () => {
       id: 1,
       title: "Travellocity",
       src: travellocity,
-      link: "https://www.travelocity.com/",
+      link: "https://meek-blancmange-7c0dba.netlify.app/",
       git: "https://github.com/Code-With-Hashim/boss-magic-6284",
       style: "hover:text-blue-400 duration-200",
       disc: "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
@@ -31,42 +29,25 @@ const Projects = () => {
       id: 3,
       title: "Movie Searching App",
       src: movieapp,
-      link: "https://www.imdb.com/",
-      git: "https://github.com/Code-With-Hashim/boss-magic-6284",
+      link: "https://admirable-buttercream-87249d.netlify.app/",
+      git: "https://github.com/Gowtham-Chokkalingam/WebDev-Projects/tree/main/MovieAppownV2",
       style: "hover:text-blue-400 duration-200",
       disc: "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
     },
+
     {
       id: 4,
-      title: "Weather App",
-      src: reactWeather,
-      link: "https://www.travelocity.com/",
-      git: "https://github.com/Code-With-Hashim/boss-magic-6284",
-      style: "hover:text-blue-400 duration-200",
-      disc: "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-    },
-    {
-      id: 5,
-      title: "ReactPrallax",
-      src: reactParallax,
-      link: "https://www.travelocity.com/",
-      git: "https://github.com/Code-With-Hashim/boss-magic-6284",
-      style: "hover:text-blue-400 duration-200",
-      disc: "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-    },
-    {
-      id: 6,
-      title: "Navbar",
-      src: navbar,
-      link: "https://www.travelocity.com/",
-      git: "https://github.com/Code-With-Hashim/boss-magic-6284",
+      title: "Food Searching App",
+      src: foodapp,
+      link: "https://rad-longma-275d13.netlify.app/receipe-of-the-day.html",
+      git: "https://github.com/Gowtham-Chokkalingam/WebDev-Projects/tree/main/FInalFoodApp/Food-App-III",
       style: "hover:text-blue-400 duration-200",
       disc: "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
     },
   ];
 
   return (
-    <div name="project" className="bg-gradient-to-b from-black to-gray-800  w-full text-white h-[100%] pt-10">
+    <div name="projects" className="bg-gradient-to-b from-black to-gray-800  w-full text-white h-[100%] pt-10">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500 hover:border-blue-500 duration-300">Projects</p>

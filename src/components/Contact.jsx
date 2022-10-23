@@ -33,7 +33,7 @@ const Contact = () => {
         </div>
         <div className="flex justify-center items-center">
         {/* action="https://getform.io/f/3fe863c5-56a1-4839-9e6f-070caf1a6c86" */}
-          <form onSubmit={handleSubmit} action="https://getform.io/f/3fe863c5-56a1-4839-9e6f-070caf1a6c86"  method="POST" className="flex flex-col w-full md:w-1/2">
+          <form  action="https://getform.io/f/3fe863c5-56a1-4839-9e6f-070caf1a6c86"  method="POST" className="flex flex-col w-full md:w-1/2">
             <input
               type="text"
               onChange={handleChange} name="name" value={data.name}
