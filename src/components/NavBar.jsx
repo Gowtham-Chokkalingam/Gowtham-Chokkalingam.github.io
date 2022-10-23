@@ -10,7 +10,7 @@ const NavBar = () => {
     { id: 5, link: "contact" },
   ];
   return (
-    <div className="flex justify-between items-center w-full h-[12%] text-white bg-black px-4 fixed ">
+    <div className="flex justify-between items-center w-full h-16 text-white bg-black px-4 fixed ">
       <div>
         <h1 className="text-2xl font-title ml-2 hover:scale-105 hover:text-blue-400 duration-200">Gowtham</h1>
       </div>
