@@ -7,7 +7,7 @@ const SocialLinks = () => {
   const links = [
     {
       id: 1,
-      child: ( 
+      child: (
         <>
           LinkedIn<FaLinkedin size={30}></FaLinkedin>
         </>
@@ -47,20 +47,37 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className="hidden lg:flex flex-col top-[35%] left-0 fixed  ">
-      <ul>
-        {links.map(({ id, child, href, style, download }) => (
-          <li
-            key={id}
-            className={`flex justify-around items-center w-[9.4rem] h-14 px-4 ml-[-100px] hover:ml-[-8px] hover:rounded-md duration-300 bg-gray-500 -z-10" ${style}`}
-          >
-            <a href={href} className="flex justify-between   items-center w-full text-white" download={download} target="_blank" rel="noreferrer">
-              <>{child}</>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <div className="hidden lg:flex flex-col top-[35%] left-0 fixed  ">
+        <ul>
+          {links.map(({ id, child, href, style, download }) => (
+            <li
+              key={id}
+              className={`flex justify-around items-center w-[9.4rem] h-14 px-4 ml-[-100px] hover:ml-[-8px] hover:rounded-md duration-300 bg-gray-500 -z-10" ${style}`}
+            >
+              <a href={href} className="flex justify-between   items-center w-full text-white" download={download} target="_blank" rel="noreferrer">
+                <>{child}</>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* <div className=" flex w-full border-red-500 ">
+        
+          {links.map(({ id, child, href, style, download }) => (
+            <div
+              key={id}
+              className={`flex justify-around items-center w-[9.4rem] h-14 px-4 hover:rounded-md duration-300 bg-orange-500 -z-10" ${style}`}
+            >
+              <a href={href} className="flex justify-between   items-center w-full text-white" download={download} target="_blank" rel="noreferrer">
+                <>{child}</>
+              </a>
+            </div>
+          ))}
+        
+      </div> */}
+    </>
   );
 };
 
