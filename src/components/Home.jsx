@@ -3,7 +3,6 @@ import ProPic from "../assets/Gowtham-Chokkalinga-fw20_0116.jpg";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import { FiDownload } from "react-icons/fi";
 import { Link } from "react-scroll";
 
 const Home = () => {
@@ -37,14 +36,20 @@ const Home = () => {
     },
   ];
   return (
-    <div name="home" className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 ">
+    <div name="home" className="h-screen w-full  bg-gradient-to-b from-black via-black to-gray-800 ">
       <div className="max-w-screen-lg mx-auto flex flex-col-reverse items-center justify-center  h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center items-center md:items-start h-full">
           <h2 className="text-[1.4rem] text-center sm:text-2xl font-bold text-white md:mt-12">I'm An Aspiring Full Stack Web-Developer</h2>
           <p className="text-gray-500 py-4 max-w-md">
-            A passionate full-stack web developer, who loves to buid cool projects and work in a team. I want to achieve global recognition and
-            exposure with my skillset, toolset and mindset.
-            {/* Full-Stack Developer, Dedicated to developing robust applications that interact with the Front & Backend part of web applications.
+            A passionate Full Stack Software Developer having an experience of building Web applications with JavaScript / Reactjs / Nodejs / MongoDb
+            and some other cool libraries and frameworks.{" "}
+            {/* A passionate full-stack web developer, who loves to buid cool projects and work in a team. I want to achieve global recognition and
+            exposure with my skillset, toolset and mindset. */}
+            {/* 
+            A passionate aspiring Full Stack Developer skilled in MERN stack. Actively ready to join in a great lively team in a good start-up environment and give my best
+
+
+            Full-Stack Developer, Dedicated to developing robust applications that interact with the Front & Backend part of web applications.
             Extensive expertise in website architecture, design, and web design, and web API designs. Problem-solving mindset with a goal to optimize
             my application for better stability and speed. Love to work in a team. */}
           </p>

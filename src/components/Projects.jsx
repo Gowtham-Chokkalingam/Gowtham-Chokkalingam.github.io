@@ -4,6 +4,7 @@ import movieapp from "../assets/portfolio/movieapp.png";
 import travellocity from "../assets/portfolio/travellocity.png";
 import myhours from "../assets/portfolio/myhours.png";
 import foodapp from "../assets/portfolio/foodapp.png";
+import weather from "../assets/portfolio/weather.png";
 
 const Projects = () => {
   const projects = [
@@ -14,7 +15,7 @@ const Projects = () => {
       link: "https://meek-blancmange-7c0dba.netlify.app/",
       git: "https://github.com/Code-With-Hashim/boss-magic-6284",
       style: "hover:text-blue-400 duration-200",
-      disc: "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+      disc: "This was a group project. We have created these website with the help of HTML, CSS And Javascript. My work was here to create Navbar, SignUp, Login, Logout part.",
     },
     {
       id: 2,
@@ -23,7 +24,7 @@ const Projects = () => {
       link: "https://myhours.com/",
       git: "https://github.com/Gowtham-Chokkalingam/great-account-499/tree/main/myhours",
       style: "hover:text-blue-400 duration-200",
-      disc: "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+      disc: "This was an Individual Project. In these website I created on Homepage, Login page. I have created these website using mainly React, HTML, CSS, Javascript and also used Chakra and Bootstrap for UI.",
     },
     {
       id: 3,
@@ -43,6 +44,15 @@ const Projects = () => {
       git: "https://github.com/Gowtham-Chokkalingam/WebDev-Projects/tree/main/FInalFoodApp/Food-App-III",
       style: "hover:text-blue-400 duration-200",
       disc: "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+    },
+    {
+      id: 5,
+      title: "Weather App",
+      src: weather,
+      link: "https://incredible-frangollo-40a170.netlify.app/",
+      git: "https://github.com/Gowtham-Chokkalingam/WebDev-Projects/tree/main/FInalFoodApp/Food-App-III",
+      style: "hover:text-blue-400 duration-200",
+      disc: "This is a Weather App made by using HTML, CSS and Javascript. This app will give you the information about weather for current day and for next three days also. This app also allow you to see your city or location on google map",
     },
   ];
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import {FiSend} from 'react-icons/fi'
+import { FiSend } from "react-icons/fi";
+import { MdKeyboardArrowRight } from "react-icons/md";
 let initState = {
   name: "",
   email: "",
@@ -9,8 +10,8 @@ const Contact = () => {
   const [data, setData] = useState(initState);
 
   const handleChange = (e) => {
-    const {  name, value } = e.target;
-    
+    const { name, value } = e.target;
+
     setData({ ...data, [name]: value });
   };
 
@@ -19,10 +20,8 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    
     setData(initState);
   };
-
 
   return (
     <div name="contact" className="w-full h-screen bg-gradient-to-b from-black to-gray-800 text-white ">
@@ -32,31 +31,44 @@ const Contact = () => {
           <p className="py-6">Get In Touch</p>
         </div>
         <div className="flex justify-center items-center">
-        {/* action="https://getform.io/f/3fe863c5-56a1-4839-9e6f-070caf1a6c86" */}
-          <form  action="https://getform.io/f/3fe863c5-56a1-4839-9e6f-070caf1a6c86"  method="POST" className="flex flex-col w-full md:w-1/2">
+          {/* action="https://getform.io/f/3fe863c5-56a1-4839-9e6f-070caf1a6c86" */}
+          <form action="https://getform.io/f/3fe863c5-56a1-4839-9e6f-070caf1a6c86" method="POST" className="flex flex-col w-full md:w-1/2">
             <input
               type="text"
-              onChange={handleChange} name="name" value={data.name}
+              onChange={handleChange}
+              name="name"
+              value={data.name}
               placeholder="Enter Your Name"
               className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
             ></input>
 
             <input
               type="text"
-              name="email" onChange={handleChange} value={data.email}
+              name="email"
+              onChange={handleChange}
+              value={data.email}
               placeholder="Enter Your Email"
               className="p-2 my-4 bg-transparent border-2 rounded-md text-white focus:outline-none"
             ></input>
 
             <textarea
-              name="message"  onChange={handleChange} value={data.message}
+              name="message"
+              onChange={handleChange}
+              value={data.message}
               rows="4"
               placeholder="Enter Your Message"
               className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
             ></textarea>
 
-            <button type="submit" className="text-white bg-gradient-to-b from-cyan-500 to to-blue-500 px-6 py-3 my-8 mx-auto flex gap-4  items-center rounded-md hover:scale-110 duration-300">
-              Send <FiSend></FiSend>
+            <button
+              type="submit"
+              className="text-white group bg-gradient-to-b from-cyan-500 to to-blue-500 px-6 py-3 my-8 mx-auto flex gap-4  items-center rounded-md hover:scale-110 duration-300"
+            >
+              Send
+            
+              <span className="group-hover:rotate-45 duration-300">
+                <FiSend></FiSend>
+              </span>
             </button>
           </form>
         </div>
