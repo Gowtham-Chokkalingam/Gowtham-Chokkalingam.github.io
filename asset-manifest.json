@@ -1,27 +1,32 @@
 {
   "files": {
-    "main.css": "/static/css/main.0e17f545.css",
-    "main.js": "/static/js/main.fa6829d6.js",
+    "main.css": "/static/css/main.024d7d35.css",
+    "main.js": "/static/js/main.e4eab7af.js",
+    "static/media/weather.png": "/static/media/weather.399ecb175862591c6e6a.png",
     "static/media/Gowtham-Chokkalinga-fw20_0116.jpg": "/static/media/Gowtham-Chokkalinga-fw20_0116.f7192a24adcdece84fd6.jpg",
     "static/media/movieapp.png": "/static/media/movieapp.a9c52ec38b6bf3f299f4.png",
     "static/media/travellocity.png": "/static/media/travellocity.f26ae455b85134d110b5.png",
     "static/media/foodapp.png": "/static/media/foodapp.190983a684b413620747.png",
+    "static/media/redux.png": "/static/media/redux.6e66cd4ff6a497e88bde.png",
     "static/media/myhours.png": "/static/media/myhours.598f4bef5d347bda9af5.png",
+    "static/media/techskils.png": "/static/media/techskils.2695b6a4a38252b7c28c.png",
     "static/media/chakra.png": "/static/media/chakra.0a16c944a38a86de90dc.png",
     "static/media/express.png": "/static/media/express.782235e7d4d873697170.png",
     "static/media/react.png": "/static/media/react.0cf951a69d8e58f83f9d.png",
     "static/media/node.png": "/static/media/node.952a9ea986dcfa5229ad.png",
+    "static/media/vscode.png": "/static/media/vscode.a773f9595b0d9ac77fa8.png",
     "static/media/github.png": "/static/media/github.3b9e32903aa89111875d.png",
     "static/media/html.png": "/static/media/html.2ba4fabc69a89a8f71e6.png",
     "static/media/tailwind.png": "/static/media/tailwind.e47ac876b8d4d0bba47a.png",
     "static/media/css.png": "/static/media/css.69a82c2d9e45c933a9cb.png",
+    "static/media/git.png": "/static/media/git.0d413ff6ac352dd5413e.png",
     "static/media/javascript.png": "/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/index.html",
-    "main.0e17f545.css.map": "/static/css/main.0e17f545.css.map",
-    "main.fa6829d6.js.map": "/static/js/main.fa6829d6.js.map"
+    "main.024d7d35.css.map": "/static/css/main.024d7d35.css.map",
+    "main.e4eab7af.js.map": "/static/js/main.e4eab7af.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e17f545.css",
-    "static/js/main.fa6829d6.js"
+    "static/css/main.024d7d35.css",
+    "static/js/main.e4eab7af.js"
   ]
 }
