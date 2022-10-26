@@ -18,11 +18,7 @@ const Contact = () => {
 
   // form submit
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    setData(initState);
-  };
+ 
 
   return (
     <div name="contact" className="w-full h-screen bg-gradient-to-b from-black to-gray-800 text-white ">

@@ -1,8 +1,6 @@
 import React from "react";
 import { BsFillSuitHeartFill, BsInstagram } from "react-icons/bs";
-import { MdKeyboardArrowRight } from "react-icons/md";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FiExternalLink } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
 
 const Footer = () => {
@@ -51,7 +49,7 @@ const Footer = () => {
       <p className="flex gap-2 items-center justify-center">
         {" "}
         Designed and Developed by Gowtham
-        <BsFillSuitHeartFill className="animate-bounce"></BsFillSuitHeartFill> Copyright © {year}
+        <BsFillSuitHeartFill className="animate-bounce text-red-800"></BsFillSuitHeartFill> Copyright © {year}
       </p>
 
       <div className="flex  justify-center   text-white gap-6 items-center w-[80%] mx-auto h-[6rem] mt-4 ">

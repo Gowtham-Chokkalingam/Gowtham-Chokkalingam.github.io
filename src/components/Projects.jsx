@@ -5,14 +5,15 @@ import travellocity from "../assets/portfolio/travellocity.png";
 import myhours from "../assets/portfolio/myhours.png";
 import foodapp from "../assets/portfolio/foodapp.png";
 import weather from "../assets/portfolio/weather.png";
-import reacticon from "../assets/rea.ico";
-import {FaReact
-} from "react-icons/fa"
+import { FaReact } from "react-icons/fa";
+import { VscPreview } from "react-icons/vsc";
+import { BsGithub } from "react-icons/bs";
+
 const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Travellocity",
+      title: "Travelocity",
       src: travellocity,
       link: "https://meek-blancmange-7c0dba.netlify.app/",
       git: "https://github.com/Code-With-Hashim/boss-magic-6284",
@@ -62,8 +63,9 @@ const Projects = () => {
     <div name="projects" className="bg-gradient-to-b from-black to-gray-800  w-full text-white h-[100%] pt-10">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
-          <p className=" text-4xl font-bold  inline border-b-4 border-gray-500 hover:border-blue-500 duration-300">Projects 
-          <FaReact className="inline ml-4 animate-spin-slow z-[-10] w-8"></FaReact>
+          <p className=" text-4xl font-bold  inline border-b-4 border-gray-500 hover:border-blue-500 duration-300">
+            Projects
+            <FaReact className="inline ml-4 animate-spin-slow z-[-10] w-8"></FaReact>
             {/* <img className="inline ml-4 animate-spin-slow z-[-10] w-8"  src={reacticon} alt='d'></img> */}
           </p>
           <p className="py-6">Check out my works below</p>
@@ -79,11 +81,19 @@ const Projects = () => {
               </div>
               <div className="flex justify-center items-center">
                 <a href={project.link}>
-                  <button className={`w-1/2 px-6 py-3 m-4 duration-200 font-bold hover:scale-105 ${project.style}`}>Demo</button>
+                  <div className="flex justify-center gap-4 items-center">
+                    <div className={`flex w-[50%]  px-8 py-3  duration-200 font-bold hover:scale-105 ${project.style}`}>Demo</div>
+                    <VscPreview className="animate-bounce"></VscPreview>
+                  </div>
                 </a>
+
                 <a href={project.git}>
-                  <button className={`w-1/2 px-6 py-3 m-4 font-bold duration-200 hover:scale-105 ${project.style}`}>Code</button>
+                  <div className="flex justify-center gap-5 items-center">
+                    <div className={`flex w-[50%]  px-8 py-3  duration-200 font-bold hover:scale-105 ${project.style}`}>GitHub</div>
+                    <BsGithub className="animate-bounce"></BsGithub>
+                  </div>
                 </a>
+                
               </div>
             </div>
           ))}

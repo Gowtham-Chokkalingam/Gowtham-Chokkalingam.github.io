@@ -16,14 +16,15 @@ const About = () => {
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500 hover:border-blue-500 duration-300 "> <FaUser className="inline mb-2 mr-2 animate-bounce" ></FaUser>About Me</p>
         </div>
-        <p className="text-xl mt-0">
+        <p className="text-l mt-0">
+        
           I'm an enthusiastic Full-Stack Web Developer with a passion for developing scalable web applications and working across the full stack.
           Adaptive to all kinds of people and surroundings and always appreciate constructive criticism to improve my performance. A highly
           self-motivated person with effective problem handling skills.
         </p>
         <br></br>
 
-        <p className="text-xl ">
+        <p className="text-l ">
 
         I want to work in a dynamic organisation that offers opportunities to enhance my technical skills and knowledge. I hope to work in an organisation that trusts in me, gives me challenges and helps me to grow and develop alongside the organisation.
           {/* I'm quite proficient in collaboration , decision-making and always accountable for my decision. Seeking to work in an environment that can

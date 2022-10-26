@@ -1,10 +1,6 @@
 import React from "react";
 
-import movieapp from "../assets/portfolio/movieapp.png";
-import travellocity from "../assets/portfolio/travellocity.png";
-import myhours from "../assets/portfolio/myhours.png";
-import foodapp from "../assets/portfolio/foodapp.png";
-import weather from "../assets/portfolio/weather.png";
+
 import {BsGithub} from 'react-icons/bs'
 
 const GitStats = () => {
