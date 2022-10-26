@@ -5,7 +5,9 @@ import travellocity from "../assets/portfolio/travellocity.png";
 import myhours from "../assets/portfolio/myhours.png";
 import foodapp from "../assets/portfolio/foodapp.png";
 import weather from "../assets/portfolio/weather.png";
-
+import reacticon from "../assets/rea.ico";
+import {FaReact
+} from "react-icons/fa"
 const Projects = () => {
   const projects = [
     {
@@ -60,7 +62,10 @@ const Projects = () => {
     <div name="projects" className="bg-gradient-to-b from-black to-gray-800  w-full text-white h-[100%] pt-10">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500 hover:border-blue-500 duration-300">Projects</p>
+          <p className=" text-4xl font-bold  inline border-b-4 border-gray-500 hover:border-blue-500 duration-300">Projects 
+          <FaReact className="inline ml-4 animate-spin-slow z-[-10] w-8"></FaReact>
+            {/* <img className="inline ml-4 animate-spin-slow z-[-10] w-8"  src={reacticon} alt='d'></img> */}
+          </p>
           <p className="py-6">Check out my works below</p>
         </div>
 

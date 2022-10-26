@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FiSend } from "react-icons/fi";
-import { MdKeyboardArrowRight } from "react-icons/md";
+import {TbMessage} from 'react-icons/tb'
+
 let initState = {
   name: "",
   email: "",
@@ -27,7 +28,7 @@ const Contact = () => {
     <div name="contact" className="w-full h-screen bg-gradient-to-b from-black to-gray-800 text-white ">
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500 hover:border-blue-500 duration-300">Contact</p>
+          <p className="text-4xl font-bold inline border-b-4 border-gray-500 hover:border-blue-500 duration-300"><TbMessage className="inline mb-2 mr-2 animate-wiggle"></TbMessage>Contact</p>
           <p className="py-6">Get In Touch</p>
         </div>
         <div className="flex justify-center items-center">

@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { RiDownload2Fill } from "react-icons/ri";
 import { Link } from "react-scroll";
+import { TfiUser } from "react-icons/tfi";
+
 const NavBar = () => {
   const [download, setDownload] = useState(false);
   const [nav, setNav] = React.useState(false);
-  const pdf = "/Gowtham-Chokkalinga-fw20_0116-Resume.pdf";
+  const pdf = "/Gowtham-Resume.pdf";
   const links = [
     { id: 1, link: "home" },
     { id: 2, link: "about" },
@@ -14,10 +16,10 @@ const NavBar = () => {
     { id: 5, link: "contact" },
   ];
 
- 
   return (
-    <div className="flex justify-between items-center w-full h-16  text-white bg-gray-900  px-4  ">
-      <div>
+    <div className="flex justify-between items-center w-full h-16  text-white bg-gray-900  px-4  fixed z-10">
+      <div className="flex justify-center items-center ">
+        <TfiUser className="animate-pulse" size={30}></TfiUser>
         <h1 className="text-2xl font-title ml-2 hover:scale-105 hover:text-blue-400 duration-200">Gowtham</h1>
       </div>
       <ul className="hidden md:flex">
@@ -33,10 +35,16 @@ const NavBar = () => {
         ))}
         <li className="px-4 font-title cursor-pointer capitalize font-medium text-gray-200  ">
           <p className="flex items-center gap-2">
-            <Link to={'home'} smooth duration={500}className="hover:scale-105 hover:text-blue-400 duration-200">{download?"Download":'Resume'}</Link>
+            <Link to={"home"} smooth duration={500} className="hover:scale-105 hover:text-blue-400 duration-200">
+              {download ? "Download" : "Resume"}
+            </Link>
 
             <a href={pdf} download target="_blank" rel="noreferrer">
-              <RiDownload2Fill onMouseEnter={() => setDownload(true) }   onMouseLeave={() => setDownload(false)} className="w-6 text-2xl hover:scale-105 hover:text-green-400 duration-200"></RiDownload2Fill>
+              <RiDownload2Fill
+                onMouseEnter={() => setDownload(true)}
+                onMouseLeave={() => setDownload(false)}
+                className="w-6 text-2xl hover:scale-105 hover:text-green-400 duration-200"
+              ></RiDownload2Fill>
             </a>
           </p>
         </li>

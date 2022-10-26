@@ -2,6 +2,9 @@ import React from "react";
 import ProPic from "../assets/Gowtham-Chokkalinga-fw20_0116.jpg";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
+import { MdWavingHand } from "react-icons/md";
+import Typed from "react-typed";
 import { HiOutlineMail } from "react-icons/hi";
 import { Link } from "react-scroll";
 
@@ -36,13 +39,22 @@ const Home = () => {
     },
   ];
   return (
-    <div name="home" className="h-screen w-full  bg-gradient-to-b from-black via-black to-gray-800 ">
-      <div className="max-w-screen-lg mx-auto flex flex-col-reverse items-center justify-center  h-full px-4 md:flex-row">
-        <div className="flex flex-col justify-center items-center md:items-start h-full">
-          <h2 className="text-[1.4rem] text-center sm:text-2xl font-bold text-white md:mt-12">I'm An Aspiring Full Stack Web-Developer</h2>
+    <div name="home" className="md:h-screen max-h-fit w-full  bg-gradient-to-b from-black via-black to-gray-800 pt-2">
+      <div className="max-w-screen-lg mx-auto flex flex-col-reverse items-center justify-between gap-4  h-full px-4 md:flex-row  ">
+        <div className="flex flex-col md:justify-center items-center md:items-start justify-start h-full ml-4">
+          <h2 className="text-[1.4rem] text-center sm:text-2xl flex gap-2 font-bold text-white md:mt-12">
+            Hi<MdWavingHand className="animate-wigglehi"></MdWavingHand>I'm A
+            <span className="text-blue-700">
+              <Typed strings={["Full-Stack Web-Developer", "MERN Stack-Developer"]} typeSpeed={100} backSpeed={50} loop></Typed>
+            </span>
+          </h2>
           <p className="text-gray-500 py-4 max-w-md">
-            A passionate Full Stack Software Developer having an experience of building Web applications with JavaScript / Reactjs / Nodejs / MongoDb
-            and some other cool libraries and frameworks.{" "}
+            <Typed className="text-gray-200"
+              strings={[
+                " A passionate Full Stack  Software Developer having an experience of building Web applications with JavaScript / Reactjs  / Nodejs / MongoDb and some other cool libraries and frameworks.",
+              ]}
+              typeSpeed={60}
+            />
             {/* A passionate full-stack web developer, who loves to buid cool projects and work in a team. I want to achieve global recognition and
             exposure with my skillset, toolset and mindset. */}
             {/* 
@@ -75,9 +87,23 @@ const Home = () => {
             ))}
           </div>
         </div>
-
-        <div className=" w-[40%] mt-24 md:mt-0">
-          <img className="  rounded-2xl mx-auto w-[70%] md:w-[60%]" src={ProPic} alt="/"></img>
+        <div className="md:hidden  w-[40%] mt-24 md:mt-0">
+          <img className="  rounded-full mx-auto w-[70%] md:w-[60%]" src={ProPic} alt="/"></img>
+        </div>
+        <div className="box w-[40%] hidden  md:block">
+          <div className="content">
+            <img className="pic mx-auto w-[50%] md:w-[50%]" src={ProPic} alt="/"></img>
+            <h2 className="text-4xl">
+              Gowtham<br></br>
+              <span> Full-Stack Web-Developer</span>
+            </h2>
+            <a
+              className="flex justify-between items-center gap-2"
+              href="https://drive.google.com/file/d/1zlsAKBTmilcC_yOJyfA_9vZmvNNlM8iF/view?usp=sharing"
+            >
+              Resume <FiExternalLink></FiExternalLink>
+            </a>
+          </div>
         </div>
       </div>
     </div>

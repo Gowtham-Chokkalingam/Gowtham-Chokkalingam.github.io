@@ -15,6 +15,7 @@ import redux from "../assets/redux.png";
 import git from "../assets/git.png";
 
 import postman from "../assets/postman.png";
+import {FiSettings} from 'react-icons/fi'
 
 
 const Skills = () => {
@@ -33,13 +34,13 @@ const Skills = () => {
     { id: 7, src: github, title: "github", style: "shadow-gray-500" },
     { id: 11, src: git, title: "Git", style: "shadow-orange-500 bg-gray-900" },
     { id: 12, src: vscode, title: "VsCode", style: "shadow-blue-500" },
-    { id: 7, src: postman, title: "Postman", style: "shadow-orange-700" },
+    { id: 14, src: postman, title: "Postman", style: "shadow-orange-700" },
   ];
   return (
     <div name="skills" className="bg-gradient-to-b from-gray-800 to-black pt-12 w-full h-full">
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white ">
         <div>
-          <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline hover:border-blue-500 duration-300">Technical Skills</p>
+          <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline hover:border-blue-500 duration-300"><FiSettings className="inline mr-2 mb-2 animate-spin-slow"></FiSettings> Technical Skills</p>
           <p className="py-6 ">Tech stacks am familiar with</p>
         </div>
         {/*For mobile device it will have 2 cols and bigger than mobile it will have 3 col*/}
