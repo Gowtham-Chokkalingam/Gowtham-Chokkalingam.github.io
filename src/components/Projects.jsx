@@ -71,13 +71,13 @@ const Projects = () => {
           <p className="py-6">Check out my works below</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 justify-center">
           {projects.map((project) => (
             <div key={project.id} className="shadow-md shadow-gray-600 rounded-lg">
               <img src={project.src} alt="#" className="rounded-md duration-300 hover:scale-105"></img>
               <div className="p-4">
                 <p className="text-xl  mt-2 font-bold">{project.title}</p>
-                <p>{project.disc}</p>
+                <p className="text-justify">{project.disc}</p>
               </div>
               <div className="flex justify-center items-center">
                 <a href={project.link}>

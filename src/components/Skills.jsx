@@ -49,7 +49,7 @@ const Skills = () => {
             <div key={id} className={`shadow-md duration-500 hover:scale-105  py-2 rounded-lg ${style}`}>
               <img src={src} alt="#" className="w-20 mx-auto" />
 
-              <p className="mt-4 font-bold capitalize">{title}</p>
+              <p className="mt-4 font-bold capitalize sm:text-[80%] text-[70%]">{title}</p>
             </div>
           ))}
         </div>
