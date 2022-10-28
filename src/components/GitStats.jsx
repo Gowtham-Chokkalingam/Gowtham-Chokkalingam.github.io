@@ -44,8 +44,7 @@ const GitStats = () => {
                 src="https://github-readme-stats.vercel.app/api/top-langs/?username=Gowtham-Chokkalingam&langs_count=8&count_private=true&layout=compact&theme=nightowl&border_radius=4.8&date_format=j%20M%5B%20Y%5D"
               />
             </div>
-            <b>Note:</b> Top languages is only a metric of the languages my public code consists of and doesn't reflect experience or skill level.
-            <br />
+            
             
             <br />
             <div className="w-[90%] border-2 flex-col justify-center items-center text-center  border-white rounded-md p-4 bg-[#112038]">
@@ -73,11 +72,14 @@ const GitStats = () => {
               </div>
             </div>
             <br />
+            <div  className="w-[90%] border-2 flex-col justify-center items-center text-center  border-white rounded-md  bg-[#0D1117]">
+
             <img
-              className="w-[90%]"
+              className="w-full"
               alt="Gowtham's Activity Graph"
-              src="https://activity-graph.herokuapp.com/graph?username=Gowtham-Chokkalingam&bg_color=0D1117&color=5BCDEC&line=5BCDEC&point=FFFFFF&hide_border=true"
+              src="https://activity-graph.herokuapp.com/graph?username=Gowtham-Chokkalingam&bg_color=112038&color=5BCDEC&line=5BCDEC&point=FFFFFF&hide_border=true"
             />
+            </div>
           </div>
         </div>
       </div>
