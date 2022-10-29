@@ -39,18 +39,18 @@ const Home = () => {
     },
   ];
   return (
-    <div name="home" className="h-screen  w-full  bg-gradient-to-b from-black via-black to-gray-800 pt-2">
+    <div name="home" className="md:h-screen h-max w-full  bg-gradient-to-b from-black via-black to-gray-800 pt-2">
       <div className="max-w-screen-lg mx-auto flex flex-col-reverse items-center justify-between gap-4  h-full px-4 md:flex-row  ">
         <div className="flex flex-col md:justify-center items-center md:items-start justify-start h-full ml-4">
-          <h2 className="text-[1.4rem] text-center sm:text-xl flex-col gap-2 font-bold text-white md:mt-12">
+          <h2 className="text-[1.4rem] text-center sm:text-[2rem] flex-col gap-2 font-bold text-white md:mt-12">
             <span className="flex gap-2">
               Hi<MdWavingHand className="animate-wigglehi"></MdWavingHand>I'm Gowtham
             </span>
           </h2>
-          <span className="text-blue-700 text-[1.4rem] font-bold">
+          <span className="text-blue-700 text-[1.4rem] sm:text-[1.8rem] font-bold">
             <Typed strings={["Full-Stack Web-Developer", "MERN Stack-Developer"]} typeSpeed={100} backSpeed={50} loop></Typed>
           </span>
-          <p className="text-gray-200 py-4 max-w-md text-justify">
+          <p className="text-gray-200 text-[1.2rem] py-4 max-w-md text-justify">
             A passionate Full Stack Software Developer having an experience of building Web applications with HTML, CSS, JavaScript, Reactjs, Nodejs,
             MongoDb and some other cool libraries and frameworks.
             {/* A passionate full-stack web developer, who loves to buid cool projects and work in a team. I want to achieve global recognition and
@@ -90,7 +90,7 @@ const Home = () => {
         </div>
         <div className="box w-[40%] hidden  md:block">
           <div className="content">
-            <img className="pic mx-auto w-[50%] md:w-[50%]" src={ProPic} alt="/"></img>
+            <img className="pic mx-auto  w-[50%] md:w-[50%]" src={ProPic} alt="/"></img>
             <h2 className="text-4xl">
               Gowtham<br></br>
               <span> Full-Stack Web-Developer</span>

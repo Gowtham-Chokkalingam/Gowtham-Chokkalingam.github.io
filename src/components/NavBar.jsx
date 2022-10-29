@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { RiDownload2Fill } from "react-icons/ri";
 import { Link } from "react-scroll";
@@ -7,7 +7,7 @@ import { AiFillHome } from "react-icons/ai";
 import { AiFillSetting } from "react-icons/ai";
 import { ImUser } from "react-icons/im";
 import { MdContactMail } from "react-icons/md";
-
+import { SiGroupon } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 
 const NavBar = () => {
@@ -22,11 +22,25 @@ const NavBar = () => {
     { id: 5, link: "contact", icon: <MdContactMail size={30} className="animate-wiggle  hover:text-green-400"></MdContactMail> },
   ];
 
+  const [scorll, setScroll] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = (event) => {
+      setScroll(Math.round(window.scrollY));
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="flex justify-between items-center w-full h-16  text-white bg-gray-900  px-4  fixed z-10">
       <div className="flex justify-center items-center ">
-        <TfiUser className="animate-pulse" size={30}></TfiUser>
-        <h1 className="text-2xl font-title ml-2 hover:scale-105 hover:text-blue-400 duration-200">Gowtham</h1>
+        {scorll > 150 ? <TfiUser className="animate-pulse" size={30}></TfiUser>:<SiGroupon className="animate-spin-slow" size={30}></SiGroupon>}
+        <h1 className="text-2xl font-title ml-2 hover:scale-105 hover:text-blue-400 duration-200">{scorll > 150 ? "Gowtham" : "Portfolio"}</h1>
       </div>
       <ul className="hidden md:flex">
         {links.map(({ id, link }) => (
@@ -41,8 +55,7 @@ const NavBar = () => {
         ))}
         <li className="px-4 font-title cursor-pointer capitalize font-medium text-gray-200  ">
           <p className="flex items-center gap-2">
-          <a href="https://drive.google.com/file/d/1zlsAKBTmilcC_yOJyfA_9vZmvNNlM8iF/view?usp=sharing">{download ? "Download" : "Resume"}</a>
-
+            <a href="https://drive.google.com/file/d/1zlsAKBTmilcC_yOJyfA_9vZmvNNlM8iF/view?usp=sharing">{download ? "Download" : "Resume"}</a>
 
             <a href={pdf} download target="_blank" rel="noreferrer">
               <RiDownload2Fill

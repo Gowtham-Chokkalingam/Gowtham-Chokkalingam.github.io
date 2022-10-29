@@ -11,8 +11,7 @@ import SocialLinks from "./components/SocialLinks";
 
 function App() {
   return (
-    <div >
-    
+    <div>
       <NavBar></NavBar>
       <Home></Home>
       <About></About>
@@ -23,7 +22,6 @@ function App() {
       <Contact></Contact>
       <Footer></Footer>
       <SocialLinks></SocialLinks>
-
     </div>
   );
 }

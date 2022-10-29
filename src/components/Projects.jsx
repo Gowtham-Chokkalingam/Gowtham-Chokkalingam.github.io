@@ -19,6 +19,7 @@ const Projects = () => {
       git: "https://github.com/Code-With-Hashim/boss-magic-6284",
       style: "hover:text-blue-400 duration-200",
       disc: "This was a group project. We have created these website with the help of HTML, CSS And Javascript. My work was here to create Navbar, SignUp, Login, Logout part.",
+      techStack: ["HTML", "CSS", "JS", "NodeJS"],
     },
     {
       id: 2,
@@ -28,6 +29,7 @@ const Projects = () => {
       git: "https://github.com/Gowtham-Chokkalingam/great-account-499/tree/main/myhours",
       style: "hover:text-blue-400 duration-200",
       disc: "This was an Individual Project. In these website I created on Homepage, Login page. I have created these website using mainly React, HTML, CSS, Javascript and also used Chakra and Bootstrap for UI.",
+      techStack: ["React", "REST API", "NodeJS", "Chakra"],
     },
     {
       id: 3,
@@ -37,6 +39,7 @@ const Projects = () => {
       git: "https://github.com/Gowtham-Chokkalingam/WebDev-Projects/tree/main/MovieAppownV2",
       style: "hover:text-blue-400 duration-200",
       disc: "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+      techStack: ["HTML", "CSS", "JS", "Axios-API", "NodeJS"],
     },
 
     {
@@ -47,6 +50,7 @@ const Projects = () => {
       git: "https://github.com/Gowtham-Chokkalingam/WebDev-Projects/tree/main/FInalFoodApp/Food-App-III",
       style: "hover:text-blue-400 duration-200",
       disc: "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+      techStack: ["HTML", "CSS", "JS", "Axios-API", "NodeJS"],
     },
     {
       id: 5,
@@ -56,11 +60,12 @@ const Projects = () => {
       git: "https://github.com/Gowtham-Chokkalingam/WebDev-Projects/tree/main/FInalFoodApp/Food-App-III",
       style: "hover:text-blue-400 duration-200",
       disc: "This is a Weather App made by using HTML, CSS and Javascript. This app will give you the information about weather for current day and for next three days also. This app also allow you to see your city or location on google map",
+      techStack: ["HTML", "CSS", "JS", "Axios-API", "NodeJS"],
     },
   ];
 
   return (
-    <div name="projects" className="bg-gradient-to-b from-black to-gray-800  w-full text-white h-[100%] pt-10">
+    <div name="projects" className="bg-gradient-to-b from-black to-gray-800  w-full text-white h-[100%] pt-16">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className=" text-4xl font-bold  inline border-b-4 border-gray-500 hover:border-blue-500 duration-300">
@@ -79,6 +84,17 @@ const Projects = () => {
                 <p className="text-xl  mt-2 font-bold">{project.title}</p>
                 <p className="text-justify">{project.disc}</p>
               </div>
+              <div className=" border-white ">
+                <div className="flex justify-center">
+                  <p className="font-600 text-[.8rem]">Tech Stack :</p>
+                  {project.techStack.map((ts, id) => (
+                    <p className="font-500 text-[.8rem] " key={id}>
+                      {ts} {id == project.techStack.length - 1 ? "" : ", "}
+                    </p>
+                  ))}
+                </div>
+              </div>
+
               <div className="flex justify-center items-center">
                 <a href={project.link}>
                   <div className="flex justify-center gap-4 items-center">
@@ -93,7 +109,6 @@ const Projects = () => {
                     <BsGithub className="animate-bounce"></BsGithub>
                   </div>
                 </a>
-                
               </div>
             </div>
           ))}
