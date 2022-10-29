@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c81eb611.css",
-    "main.js": "/static/js/main.d2a080fd.js",
+    "main.js": "/static/js/main.aed39dde.js",
     "static/media/weather.png": "/static/media/weather.399ecb175862591c6e6a.png",
     "static/media/Gowtham-Chokkalinga-fw20_0116.jpg": "/static/media/Gowtham-Chokkalinga-fw20_0116.f7192a24adcdece84fd6.jpg",
     "static/media/movieapp.png": "/static/media/movieapp.a9c52ec38b6bf3f299f4.png",
@@ -23,10 +23,10 @@
     "static/media/javascript.png": "/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/index.html",
     "main.c81eb611.css.map": "/static/css/main.c81eb611.css.map",
-    "main.d2a080fd.js.map": "/static/js/main.d2a080fd.js.map"
+    "main.aed39dde.js.map": "/static/js/main.aed39dde.js.map"
   },
   "entrypoints": [
     "static/css/main.c81eb611.css",
-    "static/js/main.d2a080fd.js"
+    "static/js/main.aed39dde.js"
   ]
 }
