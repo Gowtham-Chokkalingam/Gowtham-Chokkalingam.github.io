@@ -41,9 +41,8 @@ const NavBar = () => {
         ))}
         <li className="px-4 font-title cursor-pointer capitalize font-medium text-gray-200  ">
           <p className="flex items-center gap-2">
-            <Link to={"home"} smooth duration={500} className="hover:scale-105 hover:text-blue-400 duration-200">
-              {download ? "Download" : "Resume"}
-            </Link>
+          <a href="https://drive.google.com/file/d/1zlsAKBTmilcC_yOJyfA_9vZmvNNlM8iF/view?usp=sharing">{download ? "Download" : "Resume"}</a>
+
 
             <a href={pdf} download target="_blank" rel="noreferrer">
               <RiDownload2Fill
@@ -79,9 +78,7 @@ const NavBar = () => {
                   className=" hover:scale-105 hover:text-green-400 duration-200 animate-bounce"
                 ></RiDownload2Fill>
               </a>
-              <Link to={"home"} smooth duration={500} className="hover:scale-105 hover:text-blue-400 duration-200">
-                {download ? "Download" : "Resume"}
-              </Link>
+              <a href="https://drive.google.com/file/d/1zlsAKBTmilcC_yOJyfA_9vZmvNNlM8iF/view?usp=sharing">{download ? "Download" : "Resume"}</a>
             </p>
           </li>
         </ul>
