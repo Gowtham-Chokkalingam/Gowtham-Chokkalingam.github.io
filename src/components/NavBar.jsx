@@ -55,7 +55,7 @@ const NavBar = () => {
         ))}
         <li className="px-4 font-title cursor-pointer capitalize font-medium text-gray-200  ">
           <p className="flex items-center gap-2">
-            <a href="https://drive.google.com/file/d/1zlsAKBTmilcC_yOJyfA_9vZmvNNlM8iF/view?usp=sharing">{download ? "Download" : "Resume"}</a>
+            <a href="https://drive.google.com/file/d/1iPsfIjpXFl1GEOFs_kJFs1-_qRuJHbyi/view?usp=share_link">{download ? "Download" : "Resume"}</a>
 
             <a href={pdf} download target="_blank" rel="noreferrer">
               <RiDownload2Fill
