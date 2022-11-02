@@ -40,7 +40,8 @@ const SocialLinks = () => {
           Resume<FiDownload size={30}></FiDownload>
         </>
       ),
-      href: "/Gowtham-Chokkalinga-fw20_0116-Resume.pdf",
+
+      href: "https://drive.google.com/file/d/1zlsAKBTmilcC_yOJyfA_9vZmvNNlM8iF/view?usp=sharing",
       style: "rounded-br-md",
       download: true,
     },
@@ -55,7 +56,13 @@ const SocialLinks = () => {
               key={id}
               className={`flex justify-around items-center w-[9.4rem] h-14 px-4 ml-[-100px] hover:ml-[-8px] hover:rounded-md duration-300 bg-blue-900 -z-10" ${style}`}
             >
-              <a href={href} className="flex justify-between hover:animate-bounce  items-center w-full text-white" download={download} target="_blank" rel="noreferrer">
+              <a
+                href={href}
+                className="flex justify-between hover:animate-bounce  items-center w-full text-white"
+                download={download}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <>{child}</>
               </a>
             </li>

@@ -9,6 +9,8 @@ import { HiOutlineMail } from "react-icons/hi";
 import { Link } from "react-scroll";
 
 const Home = () => {
+  let resumeLink ='https://drive.google.com/file/d/1zlsAKBTmilcC_yOJyfA_9vZmvNNlM8iF/view?usp=sharing'
+
   const links = [
     {
       id: 1,
@@ -97,7 +99,7 @@ const Home = () => {
             </h2>
             <a
               className="flex justify-between items-center gap-2"
-              href="https://drive.google.com/file/d/1zlsAKBTmilcC_yOJyfA_9vZmvNNlM8iF/view?usp=sharing"
+              href={resumeLink}
             >
               Resume <FiExternalLink></FiExternalLink>
             </a>

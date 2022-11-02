@@ -14,6 +14,7 @@ const NavBar = () => {
   const [download, setDownload] = useState(false);
   const [nav, setNav] = React.useState(false);
   const pdf = "/Gowtham-Resume.pdf";
+  let resumeLink = "https://drive.google.com/file/d/1zlsAKBTmilcC_yOJyfA_9vZmvNNlM8iF/view?usp=sharing";
   const links = [
     { id: 1, link: "home", icon: <AiFillHome size={30} className="animate-wiggle  hover:text-green-400"></AiFillHome> },
     { id: 2, link: "about", icon: <TfiUser size={30} className="animate-pulse  hover:text-green-400"></TfiUser> },
@@ -39,7 +40,7 @@ const NavBar = () => {
   return (
     <div className="flex justify-between items-center w-full h-16  text-white bg-gray-900  px-4  fixed z-10">
       <div className="flex justify-center items-center ">
-        {scorll > 150 ? <TfiUser className="animate-pulse" size={30}></TfiUser>:<SiGroupon className="animate-spin-slow" size={30}></SiGroupon>}
+        {scorll > 150 ? <TfiUser className="animate-pulse" size={30}></TfiUser> : <SiGroupon className="animate-spin-slow" size={30}></SiGroupon>}
         <h1 className="text-2xl font-title ml-2 hover:scale-105 hover:text-blue-400 duration-200">{scorll > 150 ? "Gowtham" : "Portfolio"}</h1>
       </div>
       <ul className="hidden md:flex">
@@ -91,7 +92,7 @@ const NavBar = () => {
                   className=" hover:scale-105 hover:text-green-400 duration-200 animate-bounce"
                 ></RiDownload2Fill>
               </a>
-              <a href="https://drive.google.com/file/d/1zlsAKBTmilcC_yOJyfA_9vZmvNNlM8iF/view?usp=sharing">{download ? "Download" : "Resume"}</a>
+              <a href={resumeLink}>{download ? "Download" : "Resume"}</a>
             </p>
           </li>
         </ul>
