@@ -21,7 +21,7 @@ const GitStats = () => {
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500 hover:border-blue-500 duration-300">
-            My Github Stats <BsGithub className="inline mb-2 ml-2 animate-bounce"></BsGithub>
+            My Github Stats <BsGithub className="inline mb-2 ml-2 animate-bounce text-blue-400"></BsGithub>
           </p>
           <p className="py-6">Check out my works below</p>
           <div className="flex flex-col justify-center items-center gap-4">

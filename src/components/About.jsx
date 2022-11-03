@@ -14,7 +14,7 @@ const About = () => {
       </div>
       <div className=" mx-auto flex flex-col justify-center w-[100%] md:w-[70%] h-full ">
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500 hover:border-blue-500 duration-300 "> <FaUser className="inline mb-2 mr-2 animate-bounce" ></FaUser>About Me</p>
+          <p className="text-4xl font-bold inline border-b-4 border-gray-500 hover:border-blue-500 duration-300 "> <FaUser className="inline mb-2 mr-2 animate-bounce text-blue-400" ></FaUser>About Me</p>
         </div>
         <p className="text-[1.2rem] mt-0 lg:mr-[10rem] text-justify">
         

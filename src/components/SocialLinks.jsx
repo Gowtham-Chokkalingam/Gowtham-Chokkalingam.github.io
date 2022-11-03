@@ -4,6 +4,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { FiDownload } from "react-icons/fi";
 
 const SocialLinks = () => {
+  let resumeLink = 'https://drive.google.com/file/d/1jYTKxfdev3O7b_sbAnDAb4D1ql03IZOc/view?usp=share_link'
   const links = [
     {
       id: 1,
@@ -41,7 +42,7 @@ const SocialLinks = () => {
         </>
       ),
 
-      href: "https://drive.google.com/file/d/1zlsAKBTmilcC_yOJyfA_9vZmvNNlM8iF/view?usp=sharing",
+      href: resumeLink,
       style: "rounded-br-md",
       download: true,
     },

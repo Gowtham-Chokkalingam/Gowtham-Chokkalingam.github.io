@@ -5,6 +5,8 @@ import travellocity from "../assets/portfolio/travellocity.png";
 import myhours from "../assets/portfolio/myhours.png";
 import foodapp from "../assets/portfolio/foodapp.png";
 import weather from "../assets/portfolio/weather.png";
+import reactMovieapp from "../assets/portfolio/MovieApp-Redux-React.png";
+
 import { FaReact } from "react-icons/fa";
 import { VscPreview } from "react-icons/vsc";
 import { BsGithub } from "react-icons/bs";
@@ -25,7 +27,7 @@ const Projects = () => {
       id: 2,
       title: "Myhours",
       src: myhours,
-      link: "https://myhours.com/",
+      link: "https://gowtham-chokkalingam-makes-great-sites.netlify.app/",
       git: "https://github.com/Gowtham-Chokkalingam/great-account-499/tree/main/myhours",
       style: "hover:text-blue-400 duration-200",
       disc: "This was an Individual Project. In these website I created on Homepage, Login page. I have created these website using mainly React, HTML, CSS, Javascript and also used Chakra and Bootstrap for UI.",
@@ -62,6 +64,16 @@ const Projects = () => {
       disc: "This is a Weather App made by using HTML, CSS and Javascript. This app will give you the information about weather for current day and for next three days also. This app also allow you to see your city or location on google map",
       techStack: ["HTML", "CSS", "JS", "Axios-API", "NodeJS"],
     },
+    {
+      id: 6,
+      title: "React Moive-Searching App",
+      src: reactMovieapp,
+      link: "https://moive-app-gowtham-chokkalingam.vercel.app/",
+      git: "https://github.com/Gowtham-Chokkalingam/react-projects/tree/master/moive-app",
+      style: "hover:text-blue-400 duration-200",
+      disc: "This is Movie App built by using React, SCSS and React-Redux-Toolkit. This app will give you the information about Movies which we search and also displays the trending moives by default.",
+      techStack: ["React", "SCSS", "Redux-Toolkit", "Axios-API"],
+    },
   ];
 
   return (
@@ -70,7 +82,7 @@ const Projects = () => {
         <div className="pb-8">
           <p className=" text-4xl font-bold  inline border-b-4 border-gray-500 hover:border-blue-500 duration-300">
             Projects
-            <FaReact className="inline ml-4 animate-spin-slow z-[-10] w-8"></FaReact>
+            <FaReact className="inline ml-4 animate-spin-slow z-[-10] w-8 text-blue-400"></FaReact>
             {/* <img className="inline ml-4 animate-spin-slow z-[-10] w-8"  src={reacticon} alt='d'></img> */}
           </p>
           <p className="py-6">Check out my works below</p>
@@ -96,14 +108,14 @@ const Projects = () => {
               </div>
 
               <div className="flex justify-center items-center">
-                <a href={project.link}>
+                <a href={project.link} target="_blank" rel="noopener noreferrer">
                   <div className="flex justify-center gap-4 items-center">
                     <div className={`flex w-[50%]  px-8 py-3  duration-200 font-bold hover:scale-105 ${project.style}`}>Demo</div>
                     <VscPreview className="animate-bounce"></VscPreview>
                   </div>
                 </a>
 
-                <a href={project.git}>
+                <a href={project.git} target="_blank" rel="noopener noreferrer">
                   <div className="flex justify-center gap-5 items-center">
                     <div className={`flex w-[50%]  px-8 py-3  duration-200 font-bold hover:scale-105 ${project.style}`}>GitHub</div>
                     <BsGithub className="animate-bounce"></BsGithub>

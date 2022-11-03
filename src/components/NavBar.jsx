@@ -14,7 +14,7 @@ const NavBar = () => {
   const [download, setDownload] = useState(false);
   const [nav, setNav] = React.useState(false);
   const pdf = "/Gowtham-Resume.pdf";
-  let resumeLink = "https://drive.google.com/file/d/1zlsAKBTmilcC_yOJyfA_9vZmvNNlM8iF/view?usp=sharing";
+  let resumeLink = "https://drive.google.com/file/d/1jYTKxfdev3O7b_sbAnDAb4D1ql03IZOc/view?usp=share_link";
   const links = [
     { id: 1, link: "home", icon: <AiFillHome size={30} className="animate-wiggle  hover:text-green-400"></AiFillHome> },
     { id: 2, link: "about", icon: <TfiUser size={30} className="animate-pulse  hover:text-green-400"></TfiUser> },
@@ -56,9 +56,9 @@ const NavBar = () => {
         ))}
         <li className="px-4 font-title cursor-pointer capitalize font-medium text-gray-200  ">
           <p className="flex items-center gap-2">
-            <a href="https://drive.google.com/file/d/1iPsfIjpXFl1GEOFs_kJFs1-_qRuJHbyi/view?usp=share_link">{download ? "Download" : "Resume"}</a>
+            <a href={resumeLink}  target="_blank" rel="noopener noreferrer">{download ? "Download" : "Resume"}</a>
 
-            <a href={pdf} download target="_blank" rel="noreferrer">
+            <a href={resumeLink} download target="_blank" rel="noreferrer">
               <RiDownload2Fill
                 onMouseEnter={() => setDownload(true)}
                 onMouseLeave={() => setDownload(false)}
@@ -84,7 +84,7 @@ const NavBar = () => {
           ))}
           <li className="px-4 font-title cursor-pointer capitalize font-medium text-gray-200 py-2 ">
             <p className="flex items-center justify-start  gap-4">
-              <a href={pdf} download target="_blank" rel="noreferrer">
+              <a href={resumeLink} download target="_blank" rel="noreferrer">
                 <RiDownload2Fill
                   size={35}
                   onMouseEnter={() => setDownload(true)}
@@ -92,7 +92,7 @@ const NavBar = () => {
                   className=" hover:scale-105 hover:text-green-400 duration-200 animate-bounce"
                 ></RiDownload2Fill>
               </a>
-              <a href={resumeLink}>{download ? "Download" : "Resume"}</a>
+              <a href={resumeLink} target="_blank" rel="noopener noreferrer">{download ? "Download" : "Resume"}</a>
             </p>
           </li>
         </ul>
