@@ -64,7 +64,7 @@ const Contact = () => {
               Send
             
               <span className="group-hover:rotate-45 duration-300">
-                <FiSend></FiSend>
+                <FiSend className="animate-wigglelow"></FiSend>
               </span>
             </button>
           </form>

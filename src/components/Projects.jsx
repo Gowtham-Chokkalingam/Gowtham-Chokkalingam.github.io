@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import movieapp from "../assets/portfolio/movieapp.png";
 import travellocity from "../assets/portfolio/travellocity.png";
@@ -10,8 +10,20 @@ import reactMovieapp from "../assets/portfolio/MovieApp-Redux-React.png";
 import { FaReact } from "react-icons/fa";
 import { VscPreview } from "react-icons/vsc";
 import { BsGithub } from "react-icons/bs";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Projects = () => {
+  const [visible, setVisible] = useState(6);
+  console.log("visible:", visible);
+
+  const handleLoad = (cmd) => {
+    if (cmd === "more") {
+      setVisible((pre) => pre + 3);
+    } else {
+      setVisible(6);
+    }
+  };
+
   const projects = [
     {
       id: 1,
@@ -73,7 +85,7 @@ const Projects = () => {
       style: "hover:text-blue-400 duration-200",
       disc: "This is Movie App built by using React, SCSS and React-Redux-Toolkit. This app will give you the information about Movies which we search and also displays the trending moives by default.",
       techStack: ["React", "SCSS", "Redux-Toolkit", "Axios-API"],
-    },
+    }, 
   ];
 
   return (
@@ -89,7 +101,7 @@ const Projects = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 justify-center">
-          {projects.map((project) => (
+          {projects.slice(0, visible).map((project) => (
             <div key={project.id} className="shadow-md shadow-gray-600 rounded-lg">
               <img src={project.src} alt="#" className="rounded-md duration-300 hover:scale-105"></img>
               <div className="p-4">
@@ -101,7 +113,7 @@ const Projects = () => {
                   <p className="font-600 text-[.8rem]">Tech Stack :</p>
                   {project.techStack.map((ts, id) => (
                     <p className="font-500 text-[.8rem] " key={id}>
-                      {ts} {id == project.techStack.length - 1 ? "" : ", "}
+                      {ts} {id === project.techStack.length - 1 ? "" : ", "}
                     </p>
                   ))}
                 </div>
@@ -125,6 +137,31 @@ const Projects = () => {
             </div>
           ))}
         </div>
+        {projects.length > 6 && (
+          <div className="w-50 mx-auto mt-10">
+            {visible !== projects.length ? (
+              <button
+                onClick={() => handleLoad("more")}
+                className="capitalize group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-800 to-blue-500 cursor-pointer"
+              >
+                view more
+                <span className="group-hover:rotate-90 duration-300">
+                  <MdKeyboardArrowRight className="ml-1" size={30}></MdKeyboardArrowRight>
+                </span>
+              </button>
+            ) : (
+              <button
+                onClick={() => handleLoad("less")}
+                className="capitalize group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-800 to-blue-500 cursor-pointer"
+              >
+                view less
+                <span className="group-hover:-rotate-90 duration-300">
+                  <MdKeyboardArrowRight className="ml-1" size={30}></MdKeyboardArrowRight>
+                </span>
+              </button>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
