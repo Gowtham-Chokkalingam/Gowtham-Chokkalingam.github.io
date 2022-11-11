@@ -9,6 +9,7 @@ import { ImUser } from "react-icons/im";
 import { MdContactMail } from "react-icons/md";
 import { SiGroupon } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
+import SkeletonNavabar from "./Skeleton/SkeletonNavabar";
 
 const NavBar = () => {
   const [download, setDownload] = useState(false);
@@ -37,7 +38,17 @@ const NavBar = () => {
     };
   }, []);
 
-  return (
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return loading ? (
+    <SkeletonNavabar></SkeletonNavabar>
+  ) : (
     <div className="flex justify-between items-center w-full h-16  text-white bg-gray-900  px-4  fixed z-10">
       <div className="flex justify-center items-center ">
         {scorll > 150 ? <TfiUser className="animate-pulse" size={30}></TfiUser> : <SiGroupon className="animate-spin-slow" size={30}></SiGroupon>}
@@ -56,7 +67,9 @@ const NavBar = () => {
         ))}
         <li className="px-4 font-title cursor-pointer capitalize font-medium text-gray-200  ">
           <p className="flex items-center gap-2">
-            <a href={resumeLink}  target="_blank" rel="noopener noreferrer">{download ? "Download" : "Resume"}</a>
+            <a href={resumeLink} target="_blank" rel="noopener noreferrer">
+              {download ? "Download" : "Resume"}
+            </a>
 
             <a href={resumeLink} download target="_blank" rel="noreferrer">
               <RiDownload2Fill
@@ -92,7 +105,9 @@ const NavBar = () => {
                   className=" hover:scale-105 hover:text-green-400 duration-200 animate-bounce"
                 ></RiDownload2Fill>
               </a>
-              <a href={resumeLink} target="_blank" rel="noopener noreferrer">{download ? "Download" : "Resume"}</a>
+              <a href={resumeLink} target="_blank" rel="noopener noreferrer">
+                {download ? "Download" : "Resume"}
+              </a>
             </p>
           </li>
         </ul>

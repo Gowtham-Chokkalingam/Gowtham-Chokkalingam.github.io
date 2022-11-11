@@ -16,7 +16,6 @@ function App() {
       <Home></Home>
       <About></About>
       <Projects></Projects>
-
       <Skills></Skills>
       <GitStats></GitStats>
       <Contact></Contact>

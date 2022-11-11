@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import movieapp from "../assets/portfolio/movieapp.png";
 import travellocity from "../assets/portfolio/travellocity.png";
@@ -11,6 +11,7 @@ import { FaReact } from "react-icons/fa";
 import { VscPreview } from "react-icons/vsc";
 import { BsGithub } from "react-icons/bs";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import SkeleteonProject from "./Skeleton/SkeleteonProject";
 
 const Projects = () => {
   const [visible, setVisible] = useState(6);
@@ -78,17 +79,26 @@ const Projects = () => {
     },
     {
       id: 6,
-      title: "React Moive-Searching App",
+      title: "React Movie-Searching App",
       src: reactMovieapp,
       link: "https://moive-app-gowtham-chokkalingam.vercel.app/",
       git: "https://github.com/Gowtham-Chokkalingam/react-projects/tree/master/moive-app",
       style: "hover:text-blue-400 duration-200",
       disc: "This is Movie App built by using React, SCSS and React-Redux-Toolkit. This app will give you the information about Movies which we search and also displays the trending moives by default.",
       techStack: ["React", "SCSS", "Redux-Toolkit", "Axios-API"],
-    }, 
+    },
   ];
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
 
-  return (
+  return loading ? (
+    <SkeleteonProject></SkeleteonProject>
+  ) : (
     <div name="projects" className="bg-gradient-to-b from-black to-gray-800  w-full text-white h-[100%] pt-16">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
