@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ProPic from "../assets/Gowtham-Chokkalinga-fw20_0116.jpg";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+
 import { FiExternalLink } from "react-icons/fi";
 import { MdWavingHand } from "react-icons/md";
 import Typed from "react-typed";
 import { HiOutlineMail } from "react-icons/hi";
 import { Link } from "react-scroll";
+import SkeletonHome from "./Skeleton/SkeletonHome";
 
 const Home = () => {
   let resumeLink = "https://drive.google.com/file/d/1jYTKxfdev3O7b_sbAnDAb4D1ql03IZOc/view?usp=share_link";
@@ -40,7 +43,17 @@ const Home = () => {
       href: "mailto:foo@gmail.com",
     },
   ];
-  return (
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return loading ? (
+    <SkeletonHome></SkeletonHome>
+  ) : (
     <div name="home" className="md:h-screen h-max w-full  bg-gradient-to-b from-black via-black to-gray-800 pt-2">
       <div className="max-w-screen-lg mx-auto flex flex-col-reverse items-center justify-between gap-4  h-full px-4 md:flex-row  ">
         <div className="flex flex-col md:justify-center items-center md:items-start justify-start h-full ml-4">
@@ -87,19 +100,24 @@ const Home = () => {
             ))}
           </div>
         </div>
+
         <div className="md:hidden  w-[40%] mt-24 md:mt-0">
-          <img className="  rounded-full mx-auto w-[70%] md:w-[60%]" src={ProPic} alt="/"></img>
+         
+              <img className="  rounded-full mx-auto w-[70%] md:w-[60%]" src={ProPic} alt="/"></img>
         </div>
+
         <div className="box w-[40%] hidden  md:block">
           <div className="content">
-            <img className="pic mx-auto  w-[50%] md:w-[50%]" src={ProPic} alt="/"></img>
-            <h2 className="text-4xl">
-              Gowtham<br></br>
-              <span> Full-Stack Web-Developer</span>
-            </h2>
-            <a className="flex justify-between items-center gap-2" href={resumeLink} target="_blank" rel="noopener noreferrer">
-              Resume <FiExternalLink></FiExternalLink>
-            </a>
+          
+                <img className="pic mx-auto  w-[50%] md:w-[50%]" src={ProPic} alt="/"></img>
+                <h2 className="text-4xl">
+                  Gowtham<br></br>
+                  <span> Full-Stack Web-Developer</span>
+                </h2>
+                <a className="flex justify-between items-center gap-2" href={resumeLink} target="_blank" rel="noopener noreferrer">
+                  Resume <FiExternalLink></FiExternalLink>
+                </a>
+              
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FiSend } from "react-icons/fi";
-import {TbMessage} from 'react-icons/tb'
+import { TbMessage } from "react-icons/tb";
+import SkeletonContact from "./Skeleton/SkeletonContact";
 
 let initState = {
   name: "",
@@ -18,13 +19,23 @@ const Contact = () => {
 
   // form submit
 
- 
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 8000);
+    return () => clearTimeout(timer);
+  }, []);
 
-  return (
+  return loading ? (
+    <SkeletonContact></SkeletonContact>
+  ) : (
     <div name="contact" className="w-full h-max py-20 bg-gradient-to-b to-black from-gray-900 text-white ">
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500 hover:border-blue-500 duration-300"><TbMessage className="inline mb-2 mr-2 animate-wiggle text-blue-400"></TbMessage>Contact</p>
+          <p className="text-4xl font-bold inline border-b-4 border-gray-500 hover:border-blue-500 duration-300">
+            <TbMessage className="inline mb-2 mr-2 animate-wiggle text-blue-400"></TbMessage>Contact
+          </p>
           <p className="py-6">Get In Touch</p>
         </div>
         <div className="flex justify-center items-center">
@@ -62,7 +73,6 @@ const Contact = () => {
               className="text-white group bg-gradient-to-b from-cyan-500 to to-blue-500 px-6 py-3 my-8 mx-auto flex gap-4  items-center rounded-md hover:scale-110 duration-300"
             >
               Send
-            
               <span className="group-hover:rotate-45 duration-300">
                 <FiSend className="animate-wigglelow"></FiSend>
               </span>

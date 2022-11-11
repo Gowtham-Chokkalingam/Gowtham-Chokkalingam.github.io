@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BsFillSuitHeartFill, BsInstagram } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
+import SkeletonFooter from "./Skeleton/SkeletonFooter";
 
 const Footer = () => {
   const links = [
@@ -44,7 +45,17 @@ const Footer = () => {
   ];
   const date = new Date();
   const year = date.getFullYear();
-  return (
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 10000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return loading ? (
+    <SkeletonFooter></SkeletonFooter>
+  ) : (
     <div name="about" className="py-10 max-h-max flex-col items-center mx-auto gap-2 w-[100%]  text-white bg-gradient-to-b from-black to-gray-900   ">
       <p className="w-[90%] flex-col gap-4 items-center justify-center text mx-auto text-center">
 
