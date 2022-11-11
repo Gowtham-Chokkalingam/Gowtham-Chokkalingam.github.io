@@ -5,12 +5,13 @@ const SkeletonAbout = () => {
   return (
     <div className="bg-gradient-to-b from-gray-800 to-black w-full text-white h-[100%] pt-16 flex flex-col justify-center">
       <div className="animate-pulse flex flex-col mt-4 w-[90%] justify-center mx-auto">
-        <div className="grid md:grid-cols-2 mx-auto space-y-6 py-1 my-4 w-[98%] items-center justify-center md:justify-between">
-        <div className="md:h-64 md:w-64 h-44 w-44 mx-auto    bg-slate-700 rounded-full">
-            <div className="flex flex-col justify-center items-center gap-2 animate-pulse mx-auto">
-              <div className=" flex flex-col items-center gap-4 justify-center my-8 mx-8 md:my-24">
-                <p className="font-bold  text-gray-500 ml-4  "> Picture Loading....</p>
-                <AiOutlineLoading3Quarters size={30} color="white" className="animate-spin-slow"></AiOutlineLoading3Quarters>
+        <div className="grid md:grid-cols-2 mx-auto space-y-6 py-1 my-4 w-[98%] items-center justify-center md:justify-center">
+        
+        <div className="md:h-64 md:w-64 h-24 w-24 mx-auto bg-slate-700 rounded-full">
+            <div className="flex flex-col justify-center items-center md:gap-2 animate-pulse ">
+              <div className=" flex flex-col items-center  justify-center my-8 md:gap-4 mx-8 md:my-20">
+                <p className="font-bold  text-gray-500 ml-3  ">Loading....</p>
+                <AiOutlineLoading3Quarters size={20} color="white" className="animate-spin-slow m-auto"></AiOutlineLoading3Quarters>
               </div>
             </div>
           </div>

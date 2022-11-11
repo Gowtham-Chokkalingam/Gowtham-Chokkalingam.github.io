@@ -27,12 +27,12 @@ const SkeletonHome = () => {
             </div>
             <div className=" bg-slate-700 h-10 w-40  my-4 rounded"></div>
           </div>
-          <div className="md:h-64 md:w-64 h-44 w-44 mx-auto md:mr-4 row-start-1 md:col-start-2  bg-slate-700 rounded-full">
+          <div className="md:h-64 md:w-64 h-24 w-24 mx-auto md:mr-4 row-start-1 md:col-start-2  bg-slate-700 rounded-full">
             <div className="flex flex-col justify-center items-center gap-2 animate-pulse ">
-              <div className=" flex flex-col items-center gap-4 justify-center my-8 mx-8 md:my-20">
-                <p className="font-bold  text-gray-500 ml-2  "> Pro-Picture</p>
+              <div className=" flex flex-col items-center md:gap-4 justify-center my-8 mx-8 md:my-20">
+                <p className="font-bold hidden md:block text-gray-500 ml-2  "> Pro-Picture</p>
                 <p className="font-bold  text-gray-500 ml-3  "> Loading....</p>
-                <AiOutlineLoading3Quarters size={30} color="white" className="animate-spin-slow"></AiOutlineLoading3Quarters>
+                <AiOutlineLoading3Quarters size={20} color="white" className="animate-spin-slow m-auto"></AiOutlineLoading3Quarters>
               </div>
             </div>
           </div>
