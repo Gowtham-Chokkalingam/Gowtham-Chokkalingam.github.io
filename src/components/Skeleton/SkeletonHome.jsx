@@ -31,7 +31,7 @@ const SkeletonHome = () => {
             <div className="flex flex-col justify-center items-center gap-2 animate-pulse ">
               <div className=" flex flex-col items-center md:gap-4 justify-center my-8 mx-8 md:my-20">
                 <p className="font-bold hidden md:block text-gray-500 ml-2  "> Pro-Picture</p>
-                <p className="font-bold  text-gray-500 ml-3  "> Loading....</p>
+                <p className="font-bold  text-gray-500 ml-3  "> </p>
                 <AiOutlineLoading3Quarters size={20} color="white" className="animate-spin-slow m-auto"></AiOutlineLoading3Quarters>
               </div>
             </div>
