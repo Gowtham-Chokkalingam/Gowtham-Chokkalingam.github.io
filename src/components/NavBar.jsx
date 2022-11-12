@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { RiDownload2Fill } from "react-icons/ri";
 import { Link } from "react-scroll";
@@ -6,12 +6,22 @@ import { TfiUser } from "react-icons/tfi";
 import { AiFillHome } from "react-icons/ai";
 import { AiFillSetting } from "react-icons/ai";
 import { ImUser } from "react-icons/im";
-import { MdContactMail } from "react-icons/md";
+import { MdContactMail, MdOutlineMail } from "react-icons/md";
+import {CiMobile3} from 'react-icons/ci'
 import { SiGroupon } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import SkeletonNavabar from "./Skeleton/SkeletonNavabar";
+import contact from '../assets/img/contact.png';
+import edit from '../assets/img/edit.png';
+import inbox from '../assets/img/envelope.png';
+import settings from '../assets/img/settings.png';
+import help from '../assets/img/question.png';
+import logout from '../assets/img/log-out.png';
+import DropDown from "./DropDown";
 
 const NavBar = () => {
+  const [open, setOpen] = useState(false);
+
   const [download, setDownload] = useState(false);
   const [nav, setNav] = React.useState(false);
   const pdf = "/Gowtham-Resume.pdf";
@@ -38,22 +48,48 @@ const NavBar = () => {
     };
   }, []);
 
+  let menuRef = useRef();
+
   const [loading, setLoading] = useState(true);
   useEffect(() => {
+    let handler = (e) => {
+      if (!menuRef.current.contains(e.target)) {
+        setNav(false);
+        setOpen(false)
+        // console.log(menuRef.current);
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+
     const timer = setTimeout(() => {
+      
       setLoading(false);
     }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+      clearTimeout(timer);
+    };
+  }, [menuRef]);
 
   return loading ? (
     <SkeletonNavabar></SkeletonNavabar>
   ) : (
-    <div className="flex justify-between items-center w-full h-16  text-white bg-gray-900  px-4  fixed z-10">
-      <div className="flex justify-center items-center ">
+    <div ref={menuRef} className="flex justify-between items-center w-full h-16  text-white bg-gray-900  px-4  fixed z-10">
+      <div className="flex justify-center items-center "  onClick={()=>{setOpen(!open)}}>
         {scorll > 150 ? <TfiUser className="animate-pulse" size={30}></TfiUser> : <SiGroupon className="animate-spin-slow" size={30}></SiGroupon>}
         <h1 className="text-2xl font-title ml-2 hover:scale-105 hover:text-blue-400 duration-200">{scorll > 150 ? "Gowtham" : "Portfolio"}</h1>
       </div>
+      <div className={`dropdown-menu ${open? 'active' : 'inactive'}`} >
+          <h3>Contact Details</h3>
+          <ul>
+          
+            <DropDown img = {(<MdOutlineMail></MdOutlineMail>)} text = {"gowthamtceian@gmail.com"}/>
+            <DropDown img = {(<CiMobile3></CiMobile3>)} text = {"+91 8220330478"}/>
+          
+          </ul>
+        </div>
       <ul className="hidden md:flex">
         {links.map(({ id, link }) => (
           <li
