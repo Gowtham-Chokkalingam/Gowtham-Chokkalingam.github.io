@@ -7,17 +7,18 @@ import { AiFillHome } from "react-icons/ai";
 import { AiFillSetting } from "react-icons/ai";
 import { ImUser } from "react-icons/im";
 import { MdContactMail, MdOutlineMail } from "react-icons/md";
-import {CiMobile3} from 'react-icons/ci'
+import { CiMobile3 } from "react-icons/ci";
 import { SiGroupon } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import SkeletonNavabar from "./Skeleton/SkeletonNavabar";
-import contact from '../assets/img/contact.png';
-import edit from '../assets/img/edit.png';
-import inbox from '../assets/img/envelope.png';
-import settings from '../assets/img/settings.png';
-import help from '../assets/img/question.png';
-import logout from '../assets/img/log-out.png';
+import contact from "../assets/img/contact.png";
+import edit from "../assets/img/edit.png";
+import inbox from "../assets/img/envelope.png";
+import settings from "../assets/img/settings.png";
+import help from "../assets/img/question.png";
+import logout from "../assets/img/log-out.png";
 import DropDown from "./DropDown";
+import { FiSend } from "react-icons/fi";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -55,7 +56,7 @@ const NavBar = () => {
     let handler = (e) => {
       if (!menuRef.current.contains(e.target)) {
         setNav(false);
-        setOpen(false)
+        setOpen(false);
         // console.log(menuRef.current);
       }
     };
@@ -63,7 +64,6 @@ const NavBar = () => {
     document.addEventListener("mousedown", handler);
 
     const timer = setTimeout(() => {
-      
       setLoading(false);
     }, 2000);
 
@@ -77,19 +77,33 @@ const NavBar = () => {
     <SkeletonNavabar></SkeletonNavabar>
   ) : (
     <div ref={menuRef} className="flex justify-between items-center w-full h-16  text-white bg-gray-900  px-4  fixed z-10">
-      <div className="flex justify-center items-center "  onClick={()=>{setOpen(!open)}}>
+      <div
+        className="flex justify-center items-center "
+        onClick={() => {
+          setOpen(!open);
+        }}
+      >
         {scorll > 150 ? <TfiUser className="animate-pulse" size={30}></TfiUser> : <SiGroupon className="animate-spin-slow" size={30}></SiGroupon>}
         <h1 className="text-2xl font-title ml-2 hover:scale-105 hover:text-blue-400 duration-200">{scorll > 150 ? "Gowtham" : "Portfolio"}</h1>
       </div>
-      <div className={`dropdown-menu ${open? 'active' : 'inactive'}`} >
-          <h3>Contact Details</h3>
-          <ul>
-          
-            <DropDown img = {(<MdOutlineMail></MdOutlineMail>)} text = {"gowthamtceian@gmail.com"}/>
-            <DropDown img = {(<CiMobile3></CiMobile3>)} text = {"+91 8220330478"}/>
-          
-          </ul>
-        </div>
+      <div className={`dropdown-menu ${open ? "active" : "inactive"}`}>
+        <h3>Contact Details</h3>
+        <ul>
+          <DropDown img={<MdOutlineMail></MdOutlineMail>} text={"gowthamtceian@gmail.com"} />
+          {/* <DropDown img={<CiMobile3></CiMobile3>} text={"+91 8220330478"} /> */}
+          <Link to={"contact"} smooth duration={500}>
+            <button
+              type="submit"
+              className="text-white group bg-gradient-to-b from-cyan-500 to to-blue-500 px-4 py-1 my-4 mx-auto flex gap-2  items-center rounded-md hover:scale-110 duration-300"
+            >
+              Send Message
+              <span className="group-hover:rotate-45 duration-300">
+                <FiSend className="animate-wigglelow"></FiSend>
+              </span>
+            </button>
+          </Link>
+        </ul>
+      </div>
       <ul className="hidden md:flex">
         {links.map(({ id, link }) => (
           <li

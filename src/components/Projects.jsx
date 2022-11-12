@@ -112,8 +112,8 @@ const Projects = () => {
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 justify-center">
           {projects.slice(0, visible).map((project) => (
-            <div key={project.id} className="shadow-md shadow-gray-600 rounded-lg">
-              <img src={project.src} alt="#" className="rounded-md duration-300 hover:scale-105"></img>
+            <div key={project.id} className="shadow-md shadow-gray-600 rounded-lg hover:scale-105 duration-200 hover:shadow-blue-600">
+              <img src={project.src} alt="#" className="rounded-[16px] duration-300 hover:scale-105 p-2 "></img>
               <div className="p-4">
                 <p className="text-xl  mt-2 font-bold">{project.title}</p>
                 <p className="text-justify">{project.disc}</p>
