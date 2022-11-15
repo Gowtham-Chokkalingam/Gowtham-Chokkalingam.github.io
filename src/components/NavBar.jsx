@@ -19,7 +19,40 @@ import help from "../assets/img/question.png";
 import logout from "../assets/img/log-out.png";
 import DropDown from "./DropDown";
 import { FiSend } from "react-icons/fi";
+import useWindowSize from "../hooks/useWindowSize";
 
+const links = [
+  {
+    id: 1,
+    link: "home",
+    icon: <AiFillHome size={30} className="animate-wiggle  hover:text-green-400"></AiFillHome>,
+    css: "text-blue-500 scale-125 duration-300",
+  },
+  {
+    id: 2,
+    link: "about",
+    icon: <TfiUser size={30} className="animate-pulse  hover:text-green-400"></TfiUser>,
+    css: "text-blue-500  scale-125 duration-300",
+  },
+  {
+    id: 3,
+    link: "projects",
+    icon: <TbBrandReactNative size={30} className="animate-spin-slow  hover:text-green-400"></TbBrandReactNative>,
+    css: "text-blue-500  scale-125 duration-300",
+  },
+  {
+    id: 4,
+    link: "skills",
+    icon: <AiFillSetting size={30} className="animate-reverse-spin  hover:text-green-400"></AiFillSetting>,
+    css: "text-blue-500  scale-125 duration-300",
+  },
+  {
+    id: 5,
+    link: "contact",
+    icon: <MdContactMail size={30} className="animate-wiggle  hover:text-green-400"></MdContactMail>,
+    css: "text-blue-500  scale-125 duration-300",
+  },
+];
 const NavBar = () => {
   const [open, setOpen] = useState(false);
 
@@ -27,19 +60,36 @@ const NavBar = () => {
   const [nav, setNav] = React.useState(false);
   const pdf = "/Gowtham-Resume.pdf";
   let resumeLink = "https://drive.google.com/file/d/1jYTKxfdev3O7b_sbAnDAb4D1ql03IZOc/view?usp=share_link";
-  const links = [
-    { id: 1, link: "home", icon: <AiFillHome size={30} className="animate-wiggle  hover:text-green-400"></AiFillHome> },
-    { id: 2, link: "about", icon: <TfiUser size={30} className="animate-pulse  hover:text-green-400"></TfiUser> },
-    { id: 3, link: "projects", icon: <TbBrandReactNative size={30} className="animate-spin-slow  hover:text-green-400"></TbBrandReactNative> },
-    { id: 4, link: "skills", icon: <AiFillSetting size={30} className="animate-reverse-spin  hover:text-green-400"></AiFillSetting> },
-    { id: 5, link: "contact", icon: <MdContactMail size={30} className="animate-wiggle  hover:text-green-400"></MdContactMail> },
-  ];
 
   const [scorll, setScroll] = useState(0);
 
+  const [place, setPlace] = useState("");
+
+  /*
+  Home - 0
+  About - 615
+  Projects - 1200
+  Tech Skills - 2400
+  Contact - 4100
+
+  */
+
   useEffect(() => {
     const handleScroll = (event) => {
+      let val = Math.round(window.scrollY);
       setScroll(Math.round(window.scrollY));
+
+      if (val >= 0 && val < 580) {
+        setPlace("home");
+      } else if (val > 588 && val < 1000) {
+        setPlace("about");
+      } else if (val > 1000 && val < 2390) {
+        setPlace("projects");
+      } else if (val > 2390 && val < 4000) {
+        setPlace("skills");
+      } else if (val > 4000) {
+        setPlace("contact");
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -78,7 +128,7 @@ const NavBar = () => {
   ) : (
     <div ref={menuRef} className="flex justify-between items-center w-full h-16  text-white bg-gray-900  px-4  fixed z-10">
       <div
-        className="flex justify-center items-center "
+        className="flex justify-center items-center cursor-pointer"
         onClick={() => {
           setOpen(!open);
         }}
@@ -105,17 +155,19 @@ const NavBar = () => {
         </ul>
       </div>
       <ul className="hidden md:flex">
-        {links.map(({ id, link }) => (
+        {links.map(({ id, link, css }) => (
           <li
             key={id}
-            className="px-4 font-title cursor-pointer capitalize font-medium text-gray-200 hover:scale-105 hover:text-blue-400 duration-200  "
+            className={`${
+              place === link ? css : ""
+            } px-4 font-title cursor-pointer capitalize font-medium text-gray-200 hover:scale-105 hover:text-purple-400 duration-200  `}
           >
             <Link to={link} smooth duration={500}>
               {link}
             </Link>
           </li>
         ))}
-        <li className="px-4 font-title cursor-pointer capitalize font-medium text-gray-200  ">
+        <li className="px-4 font-title cursor-pointer capitalize font-medium text-gray-200 hover:text-purple-400 duration-200  ">
           <p className="flex items-center gap-2">
             <a href={resumeLink} target="_blank" rel="noopener noreferrer">
               {download ? "Download" : "Resume"}
@@ -125,7 +177,7 @@ const NavBar = () => {
               <RiDownload2Fill
                 onMouseEnter={() => setDownload(true)}
                 onMouseLeave={() => setDownload(false)}
-                className="w-6 text-2xl hover:scale-105 hover:text-green-400 duration-200 "
+                className="w-6 text-2xl hover:scale-110 hover:text-green-400 duration-200 "
               ></RiDownload2Fill>
             </a>
           </p>
