@@ -4,7 +4,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
-import { FiExternalLink } from "react-icons/fi";
+import { FiExternalLink, FiSend } from "react-icons/fi";
 import { MdWavingHand } from "react-icons/md";
 import Typed from "react-typed";
 import { HiOutlineMail } from "react-icons/hi";
@@ -51,6 +51,7 @@ const Home = () => {
     return () => clearTimeout(timer);
   }, []);
 
+
   return loading ? (
     <SkeletonHome></SkeletonHome>
   ) : (
@@ -77,6 +78,7 @@ const Home = () => {
             Full-Stack Developer, Dedicated to developing robust applications that interact with the Front & Backend part of web applications.
             Extensive expertise in website architecture, design, and web design, and web API designs. Problem-solving mindset with a goal to optimize
             my application for better stability and speed. Love to work in a team. */}
+            
           </p>
           <div>
             <Link

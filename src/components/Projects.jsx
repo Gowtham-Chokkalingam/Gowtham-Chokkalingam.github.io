@@ -35,7 +35,7 @@ const Projects = () => {
       link: "https://vidfy-elastic-punishment.netlify.app/",
       git: "https://github.com/Pradyumancoder/elastic-punishment-35344",
       style: "hover:text-blue-400 duration-200",
-      disc: "This was a group project. We have built this website with the help of ReactJs. My contribution in this project was to create 3 pages including landing page and its functionlaties",
+      disc: "This was a group project. We have built this website with the help of ReactJs. My contribution in this project was to create 3 pages including landing page and its functionalities",
       techStack: ["React", "ChakraUI", "Tailwind", "NodeJS"],
     },
 

@@ -13,7 +13,11 @@ let initState = {
   message: "",
 };
 const Contact = () => {
+  const [loading, setLoading] = useState(true);
+
   const [data, setData] = useState(initState);
+
+  const send = Boolean(data.email) && Boolean(data.name) && Boolean(data.message);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,7 +27,6 @@ const Contact = () => {
 
   // form submit
 
-  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
@@ -31,6 +34,28 @@ const Contact = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log("handleClick:");
+  };
+
+  const formSubmit = (e) => {
+    e.preventDefault();
+    if (!send) {
+      alert("Please Fill The All Input Feilds");
+    } else {
+      const formData = new FormData();
+      Object.entries(data).forEach(([key, value]) => {
+        formData.append(key, value);
+      });
+      fetch("https://getform.io/f/3fe863c5-56a1-4839-9e6f-070caf1a6c86", {
+        method: "POST",
+        body: formData,
+      }).then(() => setData({ name: "", email: "", message: "" }));
+      alert("Message Has Been Sent Successfully");
+
+    }
+  };
   return loading ? (
     <SkeletonContact></SkeletonContact>
   ) : (
@@ -44,7 +69,8 @@ const Contact = () => {
         </div>
         <div className="flex justify-center items-center">
           {/* action="https://getform.io/f/3fe863c5-56a1-4839-9e6f-070caf1a6c86" */}
-          <form action="https://getform.io/f/3fe863c5-56a1-4839-9e6f-070caf1a6c86" method="POST" className="flex flex-col w-full md:w-1/2">
+          {/* <form action="https://getform.io/f/3fe863c5-56a1-4839-9e6f-070caf1a6c86" method="POST" className="flex flex-col w-full md:w-1/2"> */}
+          <form onSubmit={formSubmit} className="flex flex-col w-full md:w-1/2">
             <div className="w-full flex items-center gap-4">
               <IoIosPerson size={36} className="w-[10%] animate-pulse"></IoIosPerson>
 
@@ -93,7 +119,9 @@ const Contact = () => {
                 <FiSend className="animate-wigglelow"></FiSend>
               </span>
             </button>
+            
           </form>
+          
         </div>
       </div>
     </div>

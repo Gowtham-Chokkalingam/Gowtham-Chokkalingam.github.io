@@ -79,15 +79,15 @@ const NavBar = () => {
       let val = Math.round(window.scrollY);
       setScroll(Math.round(window.scrollY));
 
-      if (val >= 0 && val < 580) {
+      if (val >= 0 && val < 380) {
         setPlace("home");
-      } else if (val > 588 && val < 1000) {
+      } else if (val > 380 && val < 820) {
         setPlace("about");
-      } else if (val > 1000 && val < 2390) {
+      } else if (val > 820 && val < 2100) {
         setPlace("projects");
-      } else if (val > 2390 && val < 4000) {
+      } else if (val > 2100 && val < 3900) {
         setPlace("skills");
-      } else if (val > 4000) {
+      } else if (val > 3900) {
         setPlace("contact");
       }
     };
