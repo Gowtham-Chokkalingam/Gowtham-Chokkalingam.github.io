@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.5f4e67c7.css",
-    "main.js": "/static/js/main.756cb2dc.js",
+    "main.css": "/static/css/main.dceec8d3.css",
+    "main.js": "/static/js/main.b125e443.js",
     "static/media/weather.png": "/static/media/weather.399ecb175862591c6e6a.png",
     "static/media/Gowtham-Chokkalinga-fw20_0116.jpg": "/static/media/Gowtham-Chokkalinga-fw20_0116.f7192a24adcdece84fd6.jpg",
     "static/media/MovieApp-Redux-React.png": "/static/media/MovieApp-Redux-React.a0ed7d860402f66577ea.png",
     "static/media/movieapp.png": "/static/media/movieapp.a9c52ec38b6bf3f299f4.png",
     "static/media/travellocity.png": "/static/media/travellocity.f26ae455b85134d110b5.png",
     "static/media/foodapp.png": "/static/media/foodapp.190983a684b413620747.png",
+    "static/media/zee5.png": "/static/media/zee5.b3f5c7e55a35ad7c6f9f.png",
     "static/media/redux.png": "/static/media/redux.6e66cd4ff6a497e88bde.png",
     "static/media/myhours.png": "/static/media/myhours.598f4bef5d347bda9af5.png",
     "static/media/techskils.png": "/static/media/techskils.5fe3d455ce2fed6cb0f4.png",
@@ -28,11 +29,11 @@
     "static/media/edit.png": "/static/media/edit.0f46e2728eb984e21ce8.png",
     "static/media/javascript.png": "/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/index.html",
-    "main.5f4e67c7.css.map": "/static/css/main.5f4e67c7.css.map",
-    "main.756cb2dc.js.map": "/static/js/main.756cb2dc.js.map"
+    "main.dceec8d3.css.map": "/static/css/main.dceec8d3.css.map",
+    "main.b125e443.js.map": "/static/js/main.b125e443.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f4e67c7.css",
-    "static/js/main.756cb2dc.js"
+    "static/css/main.dceec8d3.css",
+    "static/js/main.b125e443.js"
   ]
 }
