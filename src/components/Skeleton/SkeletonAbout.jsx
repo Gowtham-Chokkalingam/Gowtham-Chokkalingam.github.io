@@ -4,7 +4,8 @@ import { AiOutlineLoading3Quarters } from "react-icons/ai";
 const SkeletonAbout = () => {
   return (
     <div className="bg-gradient-to-b from-gray-800 to-black w-full text-white h-[100%] pt-16 flex flex-col justify-center">
-      <div className="animate-pulse flex flex-col mt-4 w-[90%] justify-center mx-auto">
+      <div className="animate-pulse flex flex-col mt-4 w-[90%] justify-center mx-auto relative">
+      <div className="absolute  bg-gray-800 w-6 h-full md:visible invisible md:animate-blink "></div>
         {/* <div className="grid md:grid-cols-2 mx-auto space-y-6 py-1 my-4 w-[98%] items-center justify-center md:justify-center"> */}
         <div className="grid md:grid-cols-2 grid-cols-1  space-y-6 py-1 my-4 w-[98%] justify-center items-center">
         

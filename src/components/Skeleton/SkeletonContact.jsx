@@ -3,7 +3,8 @@ import React from "react";
 const SkeletonContact = () => {
   return (
     <div className="w-full h-max py-20 bg-gradient-to-b to-black from-gray-900  flex flex-col">
-      <div className="animate-pulse flex flex-col mt-4 w-[70%] justify-center mx-auto">
+      <div className="animate-pulse flex flex-col mt-4 w-[70%] justify-center mx-auto relative">
+      <div className="absolute  bg-gray-800 w-6 h-full md:visible invisible md:animate-blink "></div>
         <div className=" bg-slate-700 h-9 w-[24%] rounded ml-5"></div>
         <div className="flex-1 space-y-6 py-1 my-4">
           <div className="space-y-3">

@@ -119,3 +119,11 @@
   }
   
 }
+
+.blinkd{
+  filter: blur(3px);
+  animation: leftToRight 2s infinite;
+
+}
+
+/* @keyframes le */

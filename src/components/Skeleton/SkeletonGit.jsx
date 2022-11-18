@@ -3,7 +3,8 @@ import React from "react";
 const SkeletonGit = () => {
   return (
     <div className="bg-gradient-to-b from-black to-gray-800  w-full text-white h-[100%] pt-16 flex flex-col">
-      <div className="animate-pulse flex flex-col mt-4 w-[70%] justify-center mx-auto">
+      <div className="animate-pulse flex flex-col mt-4 w-[70%] justify-center mx-auto relative">
+      <div className="absolute  bg-gray-800 w-6 h-full md:visible invisible md:animate-blink "></div>
         <div className=" bg-slate-700 h-9 w-[24%] rounded ml-5"></div>
         <div className="flex-1 space-y-6 py-1 my-4">
           <div className="space-y-3">

@@ -63,14 +63,16 @@ const NavBar = () => {
 
   const [scorll, setScroll] = useState(0);
 
-  const [place, setPlace] = useState("");
+  const [desktop, setDesktop] = useState("");
+  const [mobile, setMobile] = useState("");
+
 
   /*
   Home - 0
-  About - 615
-  Projects - 1200
-  Tech Skills - 2400
-  Contact - 4100
+  About - 600
+  Projects - 1300
+  Tech Skills - 3200
+  Contact - 5400
 
   */
 
@@ -80,15 +82,28 @@ const NavBar = () => {
       setScroll(Math.round(window.scrollY));
 
       if (val >= 0 && val < 380) {
-        setPlace("home");
-      } else if (val > 380 && val < 820) {
-        setPlace("about");
+        setMobile("home");
+      } else if (val > 380 && val < 1200) {
+        setMobile("about");
+      } else if (val > 1200 && val < 3000) {
+        setMobile("projects");
+      } else if (val > 3000 && val < 5400) {
+        setMobile("skills");
+      } else if (val > 5400) {
+        setMobile("contact");
+      }
+
+
+      if (val >= 0 && val < 600) {
+        setDesktop("home");
+      } else if (val > 600 && val < 820) {
+        setDesktop("about");
       } else if (val > 820 && val < 2100) {
-        setPlace("projects");
+        setDesktop("projects");
       } else if (val > 2100 && val < 3900) {
-        setPlace("skills");
+        setDesktop("skills");
       } else if (val > 3900) {
-        setPlace("contact");
+        setDesktop("contact");
       }
     };
 
@@ -159,7 +174,7 @@ const NavBar = () => {
           <li
             key={id}
             className={`${
-              place === link ? css : ""
+              desktop === link ? css : ""
             } px-4 font-title cursor-pointer capitalize font-medium text-gray-200 hover:scale-105 hover:text-purple-400 duration-200  `}
           >
             <Link to={link} smooth duration={500}>
@@ -189,8 +204,14 @@ const NavBar = () => {
       </div>
       {nav && (
         <ul className="flex flex-col justify-center absolute top-0 right-0 w-60 h-screen bg-gradient-to-b from-black to-gray-800 text-gray-200">
-          {links.map(({ id, link, icon }) => (
-            <li key={id} className="px-4 font-title font-medium cursor-pointer capitalize py-6">
+          {/* <li key={id} className="px-4 font-title font-medium cursor-pointer capitalize py-6"> */}
+          {links.map(({ id, link, icon, css }) => (
+            <li
+              key={id}
+              className={`${
+                mobile === link ? "text-blue-500 scale-125 duration-300 ml-5" : ""
+              } px-4 py-6 font-title cursor-pointer capitalize font-medium text-gray-200 hover:scale-105 hover:text-purple-400 duration-200  `}
+            >
               <Link className="flex items-center justify-start gap-4" onClick={() => setNav(!nav)} to={link} smooth duration={500}>
                 {icon}
                 <p className=" hover:text-blue-500">{link}</p>
