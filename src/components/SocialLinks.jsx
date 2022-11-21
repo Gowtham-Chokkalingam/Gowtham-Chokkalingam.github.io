@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { FiDownload } from "react-icons/fi";
+import { AiOutlineMobile } from "react-icons/ai";
+
 
 const SocialLinks = () => {
   let resumeLink = "https://drive.google.com/file/d/1jYTKxfdev3O7b_sbAnDAb4D1ql03IZOc/view?usp=share_link";
@@ -34,6 +36,15 @@ const SocialLinks = () => {
       ),
       href: "mailto:foo@gmail.com",
     },
+    // {
+    //   id: 4,
+    //   child: (
+    //     <>8220330478 
+    //       <AiOutlineMobile size={30}></AiOutlineMobile>
+    //     </>
+    //   ),
+
+    // },
     {
       id: 4,
       child: (
@@ -46,6 +57,7 @@ const SocialLinks = () => {
       style: "rounded-br-md",
       download: true,
     },
+  
   ];
 
   const [loading, setLoading] = useState(true);

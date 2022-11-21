@@ -14,24 +14,24 @@ const projects = [
     title: "Zee5.com",
     src: zee5,
     link: "https://vidfy-elastic-punishment.netlify.app/",
-    git: "https://github.com/Pradyumancoder/elastic-punishment-35344",
+    git: "https://github.com/Pradyumancoder/elastic-punishment-3534",
     style: "hover:text-blue-400 duration-200",
-    disc: "This was a group project. We have built this website with the help of ReactJs. My contribution in this project was to create 3 pages including landing page and its functionalities",
+    disc: "Zee5 is online video streaming  platform for watching Tv-shows & movies etc.This was a group project. We have built this website with the help of ReactJs. My contribution in this project was to create 3 pages including landing page and its functionalities",
     techStack: ["React", "ChakraUI", "Tailwind", "NodeJS"],
   },
 
   {
-    id: 2,
+    id: 1,
     title: "Myhours",
     src: myhours,
     link: "https://gowtham-chokkalingam-makes-great-sites.netlify.app/",
     git: "https://github.com/Gowtham-Chokkalingam/great-account-499/tree/main/myhours",
     style: "hover:text-blue-400 duration-200",
-    disc: "This was an Individual Project. In this I have created on Homepage, Login page with help of React , Chakra and Bootstrap for UI.",
+    disc: "MyHour is task and time tracking website used for tracking live project status.This was an Individual Project. In this I have created on Homepage, Login page with help of React , Chakra and Bootstrap for UI.",
     techStack: ["React", "REST API", "NodeJS", "Chakra"],
   },
   {
-    id: 3,
+    id: 2,
     title: "Movie Searching App",
     src: movieapp,
     link: "https://admirable-buttercream-87249d.netlify.app/",
@@ -40,19 +40,8 @@ const projects = [
     disc: "This is simple moive searching app, and by default this app will shows the trending moives. I have built this website with help of plain java script and used OMBD api for fetching the data",
     techStack: ["HTML", "CSS", "JS", "Axios-API", "NodeJS"],
   },
-
   {
-    id: 4,
-    title: "Food Searching App",
-    src: foodapp,
-    link: "https://rad-longma-275d13.netlify.app/receipe-of-the-day.html",
-    git: "https://github.com/Gowtham-Chokkalingam/WebDev-Projects/tree/main/FInalFoodApp/Food-App-III",
-    style: "hover:text-blue-400 duration-200",
-    disc: "This is a simple food searching app, this app will shows the foods whichever you search. I have buit this app using HTML, CSS, and JavaScript. Api used to fetch the data and rendering on DOM",
-    techStack: ["HTML", "CSS", "JS", "API", "NodeJS"],
-  },
-  {
-    id: 6,
+    id: 3,
     title: "React Movie-Searching App",
     src: reactMovieapp,
     link: "https://moive-app-gowtham-chokkalingam.vercel.app/",
@@ -62,7 +51,18 @@ const projects = [
     techStack: ["React", "SCSS", "Redux-Toolkit", "Axios-API"],
   },
   {
-    id: 7,
+    id: 4,
+    title: "Food Searching App",
+    src: foodapp,
+    link: "https://rad-longma-275d13.netlify.app/receipe-of-the-day.html",
+    git: "https://github.com/Gowtham-Chokkalingam/WebDev-Projects/tree/main/FInalFoodApp/Food-App-III",
+    style: "hover:text-blue-400 duration-200",
+    disc: "This is a food searching app, this app will shows the foods whichever you search. I have buit this app using HTML, CSS, and JavaScript. Api used to fetch the data and rendering on DOM",
+    techStack: ["HTML", "CSS", "JS", "API", "NodeJS"],
+  },
+ 
+  {
+    id: 5,
     title: "Shoping App",
     src: shoping,
     link: "https://shoping-cart-add-redux.netlify.app/",
@@ -72,7 +72,7 @@ const projects = [
     techStack: ["React", "React-BootStrap", "Material-UI", ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Weather App",
     src: weather,
     link: "https://incredible-frangollo-40a170.netlify.app/",
@@ -83,7 +83,7 @@ const projects = [
   },
 
   {
-    id: 1,
+    id: 7,
     title: "Travelocity",
     src: travellocity,
     link: "https://meek-blancmange-7c0dba.netlify.app/",

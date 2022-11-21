@@ -57,7 +57,7 @@ const Projects = () => {
             <div key={project.id} className="shadow-md shadow-gray-600 rounded-lg hover:scale-105 duration-200 hover:shadow-blue-600">
               <img src={project.src} alt="#" className="rounded-[16px] duration-300 hover:scale-105 p-2 "></img>
               <div className="p-4">
-                <p className="text-xl  mt-2 font-bold">{project.title}</p>
+                <p className="text-xl text-blue-400 mt-2 font-bold">{project.title}</p>
                 <p className="text-justify">{project.disc}</p>
               </div>
               <div className=" border-white ">

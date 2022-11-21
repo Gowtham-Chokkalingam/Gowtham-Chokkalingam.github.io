@@ -43,7 +43,13 @@ const About = () => {
         <p className="text-[1.2rem] text-justify lg:mr-[10rem]">
           I want to work in a dynamic organisation that offers opportunities to enhance my technical skills and knowledge. I hope to work in an
           organisation that trusts in me, gives me challenges and helps me to grow and develop alongside the organisation.
-          {/* I'm quite proficient in collaboration , decision-making and always accountable for my decision. Seeking to work in an environment that can
+          {/* 
+          
+
+
+
+I am graduate in B.E - Instrumentation and Control Engineering and love exploring new technologies in the field of Web Development and always try to adapt to them. I believe in the concept of continuous learning by regularly upgrading my skills and enhancing my knowledge. I have learnt MERN stack, data structures, algorithms, and soft skills at Masai School. As a developer, I want to contribute my skills to a company by developing software that meets the needs of the company. I want to helped in many ways, such as developing websites, apps, and software. I have also contributed in group projects terms of fixing bugs, coding, and testing.
+          I'm quite proficient in collaboration , decision-making and always accountable for my decision. Seeking to work in an environment that can
           encourage me to succeed both personally and professionally where I can utilize my skills and knowledge not only for my growth but also for
           the people around me. */}
         </p>
