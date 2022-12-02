@@ -36,15 +36,6 @@ const SocialLinks = () => {
       ),
       href: "mailto:foo@gmail.com",
     },
-    // {
-    //   id: 4,
-    //   child: (
-    //     <>8220330478 
-    //       <AiOutlineMobile size={30}></AiOutlineMobile>
-    //     </>
-    //   ),
-
-    // },
     {
       id: 4,
       child: (

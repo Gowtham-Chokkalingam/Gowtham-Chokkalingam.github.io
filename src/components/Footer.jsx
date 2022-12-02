@@ -81,8 +81,8 @@ const Footer = () => {
           >
             {link.child}
             {link.id === 5 && (
-              <p class="hover:opacity-100 duration-300 absolute bottom-6 z-10 flex justify-center items-center text-xl text-white font-semibold">
-                8220330478
+              <p class="hover:opacity-100  duration-300 absolute bottom-6 z-10 flex justify-center items-center text-xl text-white font-semibold">
+               
               </p>
             )}
           </a>

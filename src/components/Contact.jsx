@@ -6,6 +6,11 @@ import { TiMessageTyping } from "react-icons/ti";
 
 import SkeletonContact from "./Skeleton/SkeletonContact";
 import { MdOutlineMail } from "react-icons/md";
+import { AlertTitle, Snackbar } from "@mui/material";
+import MuiAlert from "@mui/material/Alert";
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 let initState = {
   name: "",
@@ -13,6 +18,24 @@ let initState = {
   message: "",
 };
 const Contact = () => {
+  // alert mui
+
+  const [open, setOpen] = React.useState(false);
+  const [fill, setFill] = React.useState(false);
+
+  const handleClickMui = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
+
+  // /jkjkjkl
   const [loading, setLoading] = useState(true);
 
   const [data, setData] = useState(initState);
@@ -41,9 +64,20 @@ const Contact = () => {
 
   const formSubmit = (e) => {
     e.preventDefault();
+
     if (!send) {
-      alert("Please Fill The All Input Feilds");
-    } else {
+      setFill(true);
+  
+
+      setTimeout(() => {
+        setFill(false);
+      }, 2000);
+      // alert("Please Fill The All Input Feilds");
+    }
+    // }else if ( data.name.toLowerCase() === "anushka" || data.message.includes("darling")|| data.message.includes("baby")|| data.message.includes("love")|| data.message.includes("miss")) {
+    //   alert(`Hi ${data.name.toUpperCase()} You Are Blocked By Gowtham`);
+    // }
+    else {
       const formData = new FormData();
       Object.entries(data).forEach(([key, value]) => {
         formData.append(key, value);
@@ -51,9 +85,11 @@ const Contact = () => {
       fetch("https://getform.io/f/3fe863c5-56a1-4839-9e6f-070caf1a6c86", {
         method: "POST",
         body: formData,
-      }).then(() => setData({ name: "", email: "", message: "" }));
-      alert("Message Has Been Sent Successfully");
-
+      }).then(() => {
+        handleClickMui();
+        setData({ name: "", email: "", message: "" });
+      });
+      // alert("Message Has Been Sent Successfully");
     }
   };
   return loading ? (
@@ -66,7 +102,14 @@ const Contact = () => {
             <TbMessage className="inline mb-2 mr-2 animate-wiggle text-blue-400"></TbMessage>Contact
           </p>
           <p className="py-6">Get In Touch</p>
+          {fill && (
+            <Alert className="w-[50%] mx-auto" severity="error">
+              <AlertTitle>Error Alert</AlertTitle>
+              Fill All Input Fields — <strong>check it out!</strong>
+            </Alert>
+          )}
         </div>
+
         <div className="flex justify-center items-center">
           {/* action="https://getform.io/f/3fe863c5-56a1-4839-9e6f-070caf1a6c86" */}
           {/* <form action="https://getform.io/f/3fe863c5-56a1-4839-9e6f-070caf1a6c86" method="POST" className="flex flex-col w-full md:w-1/2"> */}
@@ -119,9 +162,22 @@ const Contact = () => {
                 <FiSend className="animate-wigglelow"></FiSend>
               </span>
             </button>
-            
+            <div className=" w-[100%]  ">
+              <Snackbar className="ml-80" open={open} autoHideDuration={6000} onClose={handleClose}>
+                <Alert onClose={handleClose} severity="success" sx={{ width: "100%", margin: "auto" }}>
+                  {` Message Sent Successfully!`}
+                </Alert>
+              </Snackbar>
+
+              {/* <Alert severity="error">This is an error message!</Alert> */}
+            </div>
+
+            {/* <Snackbar className="ml-80" open={open} autoHideDuration={6000} onClose={handleClose}>
+              <Alert onClose={handleClose} severity="error" sx={{ width: "100%", margin: "auto" }}>
+              Please Fill All Input Fields!
+              </Alert>
+            </Snackbar> */}
           </form>
-          
         </div>
       </div>
     </div>
