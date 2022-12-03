@@ -6,11 +6,11 @@ import { TiMessageTyping } from "react-icons/ti";
 
 import SkeletonContact from "./Skeleton/SkeletonContact";
 import { MdOutlineMail } from "react-icons/md";
-import { AlertTitle, Snackbar } from "@mui/material";
-import MuiAlert from "@mui/material/Alert";
-const Alert = React.forwardRef(function Alert(props, ref) {
-  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
-});
+// import { AlertTitle, Snackbar } from "@mui/material";
+// import MuiAlert from "@mui/material/Alert";
+// const Alert = React.forwardRef(function Alert(props, ref) {
+//   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+// });
 
 let initState = {
   name: "",
@@ -23,17 +23,17 @@ const Contact = () => {
   const [open, setOpen] = React.useState(false);
   const [fill, setFill] = React.useState(false);
 
-  const handleClickMui = () => {
-    setOpen(true);
-  };
+  // const handleClickMui = () => {
+  //   setOpen(true);
+  // };
 
-  const handleClose = (event, reason) => {
-    if (reason === "clickaway") {
-      return;
-    }
+  // const handleClose = (event, reason) => {
+  //   if (reason === "clickaway") {
+  //     return;
+  //   }
 
-    setOpen(false);
-  };
+  //   setOpen(false);
+  // };
 
   // /jkjkjkl
   const [loading, setLoading] = useState(true);
@@ -66,13 +66,12 @@ const Contact = () => {
     e.preventDefault();
 
     if (!send) {
-      setFill(true);
-  
+      alert("Please Fill The All Input Fields");
+      // setFill(true);
 
-      setTimeout(() => {
-        setFill(false);
-      }, 2000);
-      // alert("Please Fill The All Input Feilds");
+      // setTimeout(() => {
+      //   setFill(false);
+      // }, 2000);
     }
     // }else if ( data.name.toLowerCase() === "anushka" || data.message.includes("darling")|| data.message.includes("baby")|| data.message.includes("love")|| data.message.includes("miss")) {
     //   alert(`Hi ${data.name.toUpperCase()} You Are Blocked By Gowtham`);
@@ -86,10 +85,11 @@ const Contact = () => {
         method: "POST",
         body: formData,
       }).then(() => {
-        handleClickMui();
+        alert(` ${data.name} Message Has Been Sent Successfully`);
         setData({ name: "", email: "", message: "" });
+        // handleClickMui();
       });
-      // alert("Message Has Been Sent Successfully");
+      //
     }
   };
   return loading ? (
@@ -102,12 +102,12 @@ const Contact = () => {
             <TbMessage className="inline mb-2 mr-2 animate-wiggle text-blue-400"></TbMessage>Contact
           </p>
           <p className="py-6">Get In Touch</p>
-          {fill && (
+          {/* {fill && (
             <Alert className="w-[50%] mx-auto" severity="error">
               <AlertTitle>Error Alert</AlertTitle>
               Fill All Input Fields — <strong>check it out!</strong>
             </Alert>
-          )}
+          )} */}
         </div>
 
         <div className="flex justify-center items-center">
@@ -162,15 +162,15 @@ const Contact = () => {
                 <FiSend className="animate-wigglelow"></FiSend>
               </span>
             </button>
-            <div className=" w-[100%]  ">
+            {/* <div className=" w-[100%]  ">
               <Snackbar className="ml-80" open={open} autoHideDuration={6000} onClose={handleClose}>
                 <Alert onClose={handleClose} severity="success" sx={{ width: "100%", margin: "auto" }}>
                   {` Message Sent Successfully!`}
                 </Alert>
-              </Snackbar>
+              </Snackbar> */}
 
-              {/* <Alert severity="error">This is an error message!</Alert> */}
-            </div>
+            {/* <Alert severity="error">This is an error message!</Alert> */}
+            {/* </div> */}
 
             {/* <Snackbar className="ml-80" open={open} autoHideDuration={6000} onClose={handleClose}>
               <Alert onClose={handleClose} severity="error" sx={{ width: "100%", margin: "auto" }}>
