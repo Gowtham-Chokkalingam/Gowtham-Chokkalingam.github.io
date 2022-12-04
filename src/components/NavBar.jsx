@@ -172,7 +172,7 @@ const NavBar = () => {
           <li
             key={id}
             className={`${
-              desktop === link ? 'text-blue-600 scale-125 duration-300' : ""
+              desktop === link ? "text-blue-600 scale-125 duration-300" : ""
             } px-4 font-title cursor-pointer capitalize font-medium text-gray-200 hover:scale-105 hover:text-blue-400 duration-200  `}
           >
             <Link to={link} smooth duration={500}>
