@@ -62,7 +62,7 @@ const Projects = () => {
               </div>
               <div className=" border-white ">
                 <div className="flex justify-center">
-                  <p className="font-600 text-[.8rem]">Tech Stack :</p>
+                  <p className="font-600 text-[.8rem]  font-bold   text-blue-400">Tech Stack :</p>
                   {project.techStack.map((ts, id) => (
                     <p className="font-500 text-[.8rem] " key={id}>
                       {ts} {id === project.techStack.length - 1 ? "" : ", "}
@@ -74,14 +74,14 @@ const Projects = () => {
               <div className="flex justify-center items-center">
                 <a href={project.link} target="_blank" rel="noopener noreferrer">
                   <div className="flex justify-center gap-4 items-center">
-                    <div className={`flex w-[50%]  px-8 py-3  duration-200 font-bold hover:scale-105 ${project.style}`}>Demo</div>
+                    <div className={`flex w-[50%]  text-blue-400 px-8 py-3  duration-200 font-bold hover:scale-105 ${project.style}`}>Demo</div>
                     <VscPreview className="animate-bounce"></VscPreview>
                   </div>
                 </a>
 
                 <a href={project.git} target="_blank" rel="noopener noreferrer">
                   <div className="flex justify-center gap-5 items-center">
-                    <div className={`flex w-[50%]  px-8 py-3  duration-200 font-bold hover:scale-105 ${project.style}`}>GitHub</div>
+                    <div className={`flex w-[50%]  text-blue-400 px-8 py-3  duration-200 font-bold hover:scale-105 ${project.style}`}>GitHub</div>
                     <BsGithub className="animate-bounce"></BsGithub>
                   </div>
                 </a>

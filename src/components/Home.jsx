@@ -60,10 +60,10 @@ const Home = () => {
         <div className="flex flex-col md:justify-center items-center md:items-start justify-start h-full ml-4">
           <h2 className="text-[1.4rem] text-center sm:text-[2rem] flex-col gap-2 font-bold text-white md:mt-12">
             <span className="flex gap-2">
-              Hi<MdWavingHand className="animate-wigglehi text-blue-700"></MdWavingHand>I'm Gowtham
+              Hi<MdWavingHand className="animate-wigglehi text-blue-500"></MdWavingHand>I'm Gowtham
             </span>
           </h2>
-          <span className="text-blue-700 text-[1.4rem] sm:text-[1.8rem] font-bold">
+          <span className="text-blue-500 text-[1.4rem] sm:text-[1.8rem] font-bold">
             <Typed strings={["Full-Stack Web-Developer", "MERN Stack-Developer"]} typeSpeed={100} backSpeed={50} loop></Typed>
           </span>
           <p className="text-gray-200 text-[1.2rem] py-4 max-w-md text-justify">

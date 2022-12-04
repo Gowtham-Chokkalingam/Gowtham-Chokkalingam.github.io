@@ -69,7 +69,7 @@ const GitStats = () => {
               </div>
               <GitHubCalendar 
                 style={{ width: "80%", margin: "auto", marginTop: "10px" }}
-                color="#F15412"
+                color="#39d353"
                 showWeekdayLabels={"true"}
                 blockRadius={2}
                 username="gowtham-chokkalingam" 
@@ -86,14 +86,14 @@ const GitStats = () => {
               </div>
             </div>
             <br />
-            <div  className="w-[90%] border-2 flex-col justify-center items-center text-center  border-white rounded-md hover:scale-105 duration-150 bg-[#0D1117]">
+            {/* <div  className="w-[90%] border-2 flex-col justify-center items-center text-center  border-white rounded-md hover:scale-105 duration-150 bg-[#0D1117]">
 
             <img
               className="w-full "
               alt="Gowtham's Activity Graph"
               src="https://activity-graph.herokuapp.com/graph?username=Gowtham-Chokkalingam&bg_color=112038&color=5BCDEC&line=5BCDEC&point=FFFFFF&hide_border=true"
             />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -66,7 +66,6 @@ const NavBar = () => {
   const [desktop, setDesktop] = useState("");
   const [mobile, setMobile] = useState("");
 
-
   /*
   Home - 0
   About - 600
@@ -92,7 +91,6 @@ const NavBar = () => {
       } else if (val > 5400) {
         setMobile("contact");
       }
-
 
       if (val >= 0 && val < 600) {
         setDesktop("home");
@@ -174,15 +172,15 @@ const NavBar = () => {
           <li
             key={id}
             className={`${
-              desktop === link ? css : ""
-            } px-4 font-title cursor-pointer capitalize font-medium text-gray-200 hover:scale-105 hover:text-purple-400 duration-200  `}
+              desktop === link ? 'text-blue-600 scale-125 duration-300' : ""
+            } px-4 font-title cursor-pointer capitalize font-medium text-gray-200 hover:scale-105 hover:text-blue-400 duration-200  `}
           >
             <Link to={link} smooth duration={500}>
               {link}
             </Link>
           </li>
         ))}
-        <li className="px-4 font-title cursor-pointer capitalize font-medium text-gray-200 hover:text-purple-400 duration-200  ">
+        <li className="px-4 font-title cursor-pointer capitalize font-medium text-gray-200 hover:text-blue-400 duration-200  ">
           <p className="flex items-center gap-2">
             <a href={resumeLink} target="_blank" rel="noopener noreferrer">
               {download ? "Download" : "Resume"}
@@ -209,8 +207,8 @@ const NavBar = () => {
             <li
               key={id}
               className={`${
-                mobile === link ? "text-blue-500 scale-125 duration-300 ml-5" : ""
-              } px-4 py-6 font-title cursor-pointer capitalize font-medium text-gray-200 hover:scale-105 hover:text-purple-400 duration-200  `}
+                mobile === link ? "text-blue-600 scale-125 duration-300 ml-5" : ""
+              } px-4 py-6 font-title cursor-pointer capitalize font-medium text-gray-200 hover:scale-105 hover:text-blue-400 duration-200  `}
             >
               <Link className="flex items-center justify-start gap-4" onClick={() => setNav(!nav)} to={link} smooth duration={500}>
                 {icon}
