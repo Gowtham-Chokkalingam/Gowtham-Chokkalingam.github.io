@@ -66,7 +66,7 @@ const Home = () => {
           <span className="text-blue-500 text-[1.4rem] sm:text-[1.8rem] font-bold">
             <Typed strings={["Full-Stack Web-Developer", "MERN Stack-Developer"]} typeSpeed={100} backSpeed={50} loop></Typed>
           </span>
-          <p className="text-gray-200 text-[1.2rem] py-4 max-w-md text-justify">
+          <p className="text-gray-200 text-[1.2rem] py-4 max-w-md text-justify mr-4">
             A passionate Full Stack Software Developer having an experience of building Web applications with HTML, CSS, JavaScript, Reactjs, Nodejs,
             MongoDb and some other cool libraries and frameworks.
             {/* A passionate full-stack web developer, who loves to buid cool projects and work in a team. I want to achieve global recognition and

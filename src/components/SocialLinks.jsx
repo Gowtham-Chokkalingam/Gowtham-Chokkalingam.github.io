@@ -44,7 +44,7 @@ const SocialLinks = () => {
         </>
       ),
 
-      href: resumeLink,
+      href: "../assets/Gowtham-Chokkalingam-Resume.pdf",
       style: "rounded-br-md",
       download: true,
     },
@@ -69,7 +69,7 @@ const SocialLinks = () => {
                 className={`flex justify-around items-center w-[9.4rem] h-14 px-4 ml-[-100px] hover:ml-[-8px] hover:rounded-md duration-300 bg-gradient-to-b from-gray-800 to-gray-700  -z-10" ${style}`}
               >
                 <a
-                  href={href}
+                  href={href} 
                   className="flex justify-between hover:animate-pulse  items-center w-full text-white"
                   download={download}
                   target="_blank"

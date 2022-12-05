@@ -3,6 +3,8 @@ import { FiSend } from "react-icons/fi";
 import { TbMessage } from "react-icons/tb";
 import { IoIosPerson } from "react-icons/io";
 import { TiMessageTyping } from "react-icons/ti";
+import { AiOutlineMobile } from "react-icons/ai";
+
 
 import SkeletonContact from "./Skeleton/SkeletonContact";
 import { MdOutlineMail } from "react-icons/md";
@@ -65,6 +67,8 @@ const Contact = () => {
             <TbMessage className="inline mb-2 mr-2 animate-wiggle text-blue-400"></TbMessage>Contact
           </p>
           <p className="py-6">Get In Touch</p>
+          <p className="flex gap-4 items-center"><MdOutlineMail></MdOutlineMail>gowthamtceian@gmail.com</p>
+          <p className="flex gap-4 items-center"><AiOutlineMobile></AiOutlineMobile>+91 8220330478</p>
         </div>
         <div className="flex justify-center items-center">
           {/* action="https://getform.io/f/3fe863c5-56a1-4839-9e6f-070caf1a6c86" */}
