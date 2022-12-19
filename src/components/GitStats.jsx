@@ -58,42 +58,48 @@ const GitStats = () => {
                 src="https://github-readme-stats.vercel.app/api/top-langs/?username=Gowtham-Chokkalingam&langs_count=8&count_private=true&layout=compact&theme=nightowl&border_radius=4.8&date_format=j%20M%5B%20Y%5D"
               />
             </div>
-            
-            
+
             <br />
-            <div className="w-[90%] border-2 flex-col justify-center items-center text-center sm:block hidden border-white rounded-md p-4 bg-[#112038]">
+            <div className="w-[90%] border-2 flex-col justify-center items-center text-center  border-white rounded-md p-4 bg-[#112038]">
               <div className="flex justify-between">
-              <BiTargetLock size={20} className='animate-spin-slow'></BiTargetLock>
-                <h2 className="capitalize font-bold text-2xl text-purple-400 ">My contributions In GitHub </h2>
-                <BiTargetLock size={20} className='animate-reverse-spin'></BiTargetLock>
+                <BiTargetLock size={20} className="animate-spin-slow"></BiTargetLock>
+                <h2 className="capitalize font-bold md:text-2xl text-purple-400 ">My contributions In GitHub </h2>
+                <BiTargetLock size={20} className="animate-reverse-spin"></BiTargetLock>
               </div>
-              <GitHubCalendar 
-                style={{ width: "80%", margin: "auto", marginTop: "10px" }}
-                color="#39d353"
-                showWeekdayLabels={"true"}
-                blockRadius={2}
-                username="gowtham-chokkalingam" 
-                transformData={selectLastHalfYear}
-                blockSize={20} 
-                fontSize={16} 
-              >
-                <ReactTooltip delayShow={20} html />
-              </GitHubCalendar>
+              {width > 620 ? (
+                <GitHubCalendar
+                  style={{ width: "80%", margin: "auto", marginTop: "10px" }}
+                  color="#39d353"
+                  showWeekdayLabels={"true"}
+                  blockRadius={2}
+                  username="gowtham-chokkalingam"
+                  transformData={selectLastHalfYear}
+                  blockSize={20}
+                  fontSize={16}
+                >
+                  <ReactTooltip delayShow={20} html />
+                </GitHubCalendar>
+              ) : (
+                <img
+                  className="my-4 "
+                  src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Gowtham-Chokkalingam&theme=2077"
+                  alt="g"
+                />
+              )}
+
               <div className="flex justify-between">
-              <BiTargetLock size={20} className='animate-spin-slow'></BiTargetLock>
-                <h2 className="capitalize font-bold text-cyan-400">   </h2>
-                <BiTargetLock size={20} className='animate-reverse-spin'></BiTargetLock>
+                <BiTargetLock size={20} className="animate-spin-slow"></BiTargetLock>
+                <h2 className="capitalize font-bold text-cyan-400"> </h2>
+                <BiTargetLock size={20} className="animate-reverse-spin"></BiTargetLock>
               </div>
             </div>
             <br />
-            {/* <div  className="w-[90%] border-2 flex-col justify-center items-center text-center  border-white rounded-md hover:scale-105 duration-150 bg-[#0D1117]">
-
-            <img
-              className="w-full "
-              alt="Gowtham's Activity Graph"
-              src="https://activity-graph.herokuapp.com/graph?username=Gowtham-Chokkalingam&bg_color=112038&color=5BCDEC&line=5BCDEC&point=FFFFFF&hide_border=true"
-            />
-            </div> */}
+            <div className="w-[90%] border-2 flex-col justify-center items-center text-center  border-white rounded-md hover:scale-105 duration-150 bg-[#0D1117]">
+              <img
+                src="https://github-readme-activity-graph.cyclic.app/graph?username=Gowtham-Chokkalingam&theme=nightowl"
+                alt="Git contribution graph"
+              />
+            </div>
           </div>
         </div>
       </div>
