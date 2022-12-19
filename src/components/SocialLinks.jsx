@@ -3,8 +3,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { FiDownload } from "react-icons/fi";
 import { AiOutlineMobile } from "react-icons/ai";
-
-
+import second from "./../assets/Gowtham-Chokkalingam-Resume.pdf";
 const SocialLinks = () => {
   let resumeLink = "https://drive.google.com/file/d/1jYTKxfdev3O7b_sbAnDAb4D1ql03IZOc/view?usp=share_link";
   const links = [
@@ -44,11 +43,10 @@ const SocialLinks = () => {
         </>
       ),
 
-      href: "../assets/Gowtham-Chokkalingam-Resume.pdf",
+      href: "./Gowtham-Chokkalingam-Resume.pdf",
       style: "rounded-br-md",
-      download: true,
+      download: "Gowtham-Chokkalinga-fw20_0116-Resume.pdf",
     },
-  
   ];
 
   const [loading, setLoading] = useState(true);
@@ -69,7 +67,7 @@ const SocialLinks = () => {
                 className={`flex justify-around items-center w-[9.4rem] h-14 px-4 ml-[-100px] hover:ml-[-8px] hover:rounded-md duration-300 bg-gradient-to-b from-gray-800 to-gray-700  -z-10" ${style}`}
               >
                 <a
-                  href={href} 
+                  href={href}
                   className="flex justify-between hover:animate-pulse  items-center w-full text-white"
                   download={download}
                   target="_blank"

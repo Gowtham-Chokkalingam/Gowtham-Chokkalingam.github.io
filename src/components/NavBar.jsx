@@ -185,8 +185,8 @@ const NavBar = () => {
             <a href={resumeLink} target="_blank" rel="noopener noreferrer">
               {download ? "Download" : "Resume"}
             </a>
-
-            <a href="https://drive.google.com/file/d/1jYTKxfdev3O7b_sbAnDAb4D1ql03IZOc/view" download >
+            <a href={pdf} download={"Gowtham-Chokkalingam-Resume"}>
+              {/* <a href="https://drive.google.com/file/d/1jYTKxfdev3O7b_sbAnDAb4D1ql03IZOc/view" download > */}
               <RiDownload2Fill
                 onMouseEnter={() => setDownload(true)}
                 onMouseLeave={() => setDownload(false)}
@@ -226,7 +226,8 @@ const NavBar = () => {
                   className=" hover:scale-105 hover:text-green-400 duration-200 animate-bounce"
                 ></RiDownload2Fill>
               </a>
-              <a href={"../assets/Gowtham-Chokkalingam-Resume.pdf"} download={true} target="_blank" rel="noopener noreferrer">
+              <a href={pdf} download={"Gowtham-Chokkalingam-Resume"}>
+                {/* <a href={"../assets/Gowtham-Chokkalingam-Resume.pdf"} download={true} target="_blank" rel="noopener noreferrer"> */}
                 {download ? "Download" : "Resume"}
               </a>
             </p>
