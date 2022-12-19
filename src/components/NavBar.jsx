@@ -58,7 +58,7 @@ const NavBar = () => {
 
   const [download, setDownload] = useState(false);
   const [nav, setNav] = React.useState(false);
-  const pdf = "/Gowtham-Resume.pdf";
+  const pdf = "/Gowtham-Chokkalingam-Resume.pdf";
   let resumeLink = "https://drive.google.com/file/d/1jYTKxfdev3O7b_sbAnDAb4D1ql03IZOc/view?usp=share_link";
 
   const [scorll, setScroll] = useState(0);
