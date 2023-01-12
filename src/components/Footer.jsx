@@ -77,13 +77,15 @@ const Footer = () => {
           <a
             key={link.id}
             href={link.href}
-            className={`flex flex-col justify-center items-center text-[2rem] ${link.id!==5 ?"hover:animate-bounce":"hover:relative"} duration-200`}
+            className={`flex flex-col justify-center items-center text-[2rem] ${
+              link.id !== 5 ? "hover:animate-bounce" : "hover:relative"
+            } duration-200`}
+            target="_blank"
+            rel="noreferrer"
           >
             {link.child}
             {link.id === 5 && (
-              <p className="hover:opacity-100  duration-300 absolute bottom-6 z-10 flex justify-center items-center text-xl text-white font-semibold">
-               
-              </p>
+              <p className="hover:opacity-100  duration-300 absolute bottom-6 z-10 flex justify-center items-center text-xl text-white font-semibold"></p>
             )}
           </a>
         ))}

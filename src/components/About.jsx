@@ -40,9 +40,9 @@ const About = () => {
         </p>
         <br></br>
 
-        <p className="text-[1.2rem] text-justify lg:mr-[10rem]">
-          I want to work in a dynamic organisation that offers opportunities to enhance my technical skills and knowledge. I hope to work in an
-          organisation that trusts in me, gives me challenges and helps me to grow and develop alongside the organisation.
+        <p className="text-[1.2rem] text-justify lg:mr-[10rem]"> 
+          I want to work in a dynamic organization that offers opportunities to enhance my technical skills and knowledge. I hope to work in an
+          organization that trusts in me, gives me challenges and helps me to grow and develop alongside the organization.
           {/* 
           
 

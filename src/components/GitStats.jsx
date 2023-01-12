@@ -39,7 +39,16 @@ const GitStats = () => {
           </p>
           <p className="py-6">Check out my works below</p>
           <div className="flex flex-col justify-center items-center gap-4">
-            <div className="w-full grid grid-cols-1  md:grid-cols-2   md:grid-rows-2 gap-8 text-center justify-center ">
+            <div className="w-full grid grid-cols-1   gap-8 text-center justify-center ">
+              <img
+                className="w-[60%] mx-auto hover:shadow-bule-500 hover:scale-105 duration-150"
+                title="🔥 Get streak stats for your profile at git.io/streak-stats"
+                alt="Gowtham streak"
+                src="https://streak-stats.demolab.com?user=Gowtham-Chokkalingam&theme=nightowl&border_radius=4.8&date_format=j%20M%5B%20Y%5D"
+              />
+            </div>
+            {/* Git stack change it later below */}
+            {/* <div className="w-full grid grid-cols-1  md:grid-cols-2   md:grid-rows-2 gap-8 text-center justify-center ">
               <img
                 className="w-[90%] mx-auto hover:shadow-bule-500 hover:scale-105 duration-150"
                 title="🔥 Get streak stats for your profile at git.io/streak-stats"
@@ -57,28 +66,21 @@ const GitStats = () => {
                 alt="Gowtham's Top Languages"
                 src="https://github-readme-stats.vercel.app/api/top-langs/?username=Gowtham-Chokkalingam&langs_count=8&count_private=true&layout=compact&theme=nightowl&border_radius=4.8&date_format=j%20M%5B%20Y%5D"
               />
-            </div>
+            </div> */}
 
             <br />
-            <div className="w-[90%] border-2 flex-col justify-center items-center text-center  border-white rounded-md p-4 bg-[#112038]">
+            <div className="w-[80%] border-2 flex-col justify-center items-center text-center  border-white rounded-md p-4 bg-[#112038]">
               <div className="flex justify-between">
                 <BiTargetLock size={20} className="animate-spin-slow"></BiTargetLock>
                 <h2 className="capitalize font-bold md:text-2xl text-purple-400 ">My contributions In GitHub </h2>
                 <BiTargetLock size={20} className="animate-reverse-spin"></BiTargetLock>
               </div>
               {width > 620 ? (
-                <GitHubCalendar
-                  style={{ width: "80%", margin: "auto", marginTop: "10px" }}
-                  color="#39d353"
-                  showWeekdayLabels={"true"}
-                  blockRadius={2}
-                  username="gowtham-chokkalingam"
-                  transformData={selectLastHalfYear}
-                  blockSize={20}
-                  fontSize={16}
-                >
-                  <ReactTooltip delayShow={20} html />
-                </GitHubCalendar>
+                <img
+                  className="my-4 mx-auto"
+                  src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Gowtham-Chokkalingam&theme=2077"
+                  alt="g"
+                />
               ) : (
                 <img
                   className="my-4 "
@@ -94,7 +96,7 @@ const GitStats = () => {
               </div>
             </div>
             <br />
-            <div className="w-[90%] border-2 flex-col justify-center items-center text-center  border-white rounded-md hover:scale-105 duration-150 bg-[#0D1117]">
+            <div className="w-[80%] border-2 flex-col justify-center items-center text-center  border-white rounded-md hover:scale-105 duration-150 bg-[#0D1117]">
               <img
                 src="https://github-readme-activity-graph.cyclic.app/graph?username=Gowtham-Chokkalingam&theme=nightowl"
                 alt="Git contribution graph"
