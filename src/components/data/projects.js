@@ -6,6 +6,7 @@ import weather from "../../assets/portfolio/weather.png";
 import zee5 from "../../assets/portfolio/zee5.png";
 import flipkart from "../../assets/portfolio/Fipkartclone.png";
 import shoping from "../../assets/portfolio/shopingCartRedux.png";
+import jobsearch from "../../assets/portfolio/JobSearchUserJbSearchpage.png";
 
 import reactMovieapp from "../../assets/portfolio/MovieApp-Redux-React.png";
 
@@ -21,7 +22,17 @@ const projects = [
     techStack: ["ReactJs", "MongoDB", "NodeJS", "Redux"],
   },
   {
-    id: 0,
+    id: 1,
+    title: "Mern-Job-Search-APP",
+    src: jobsearch,
+    link: "https://mern-job-search-app.netlify.app/",
+    git: "https://github.com/Gowtham-Chokkalingam/Job-Search-App-Mern",
+    style: "hover:text-blue-400 duration-200",
+    disc: "This is MERN stack job search website With a user-friendly front-end design, made with React-Chakra UI and state is efficiently managed through Redux store. And Backend is features advanced backend technology with MongoDB, Node.js, Express, and Mongoose, ensuring seamless data storage and API operations and with this advanced security measures implemented in the backend. Using JWT and password hashing with Node.js and Express.js, sensitive user data is protected.",
+    techStack: ["React", "ChakraUI", "Redux", "MongoDB", "NodeJS"],
+  },
+  {
+    id: 2,
     title: "Zee5.com",
     src: zee5,
     link: "https://vidfy-elastic-punishment.netlify.app/",
@@ -32,7 +43,7 @@ const projects = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: "React Movie-Searching App",
     src: reactMovieapp,
     link: "https://moive-app-gowtham-chokkalingam.vercel.app/",
@@ -42,7 +53,7 @@ const projects = [
     techStack: ["React", "SCSS", "Redux-Toolkit", "Axios-API"],
   },
   {
-    id: 1,
+    id: 4,
     title: "Myhours",
     src: myhours,
     link: "https://gowtham-chokkalingam-makes-great-sites.netlify.app/",
@@ -53,7 +64,7 @@ const projects = [
   },
 
   {
-    id: 3,
+    id: 5,
     title: "Movie Searching App",
     src: movieapp,
     link: "https://admirable-buttercream-87249d.netlify.app/",
@@ -63,7 +74,7 @@ const projects = [
     techStack: ["HTML", "CSS", "JS", "Axios-API", "NodeJS"],
   },
   {
-    id: 4,
+    id: 6,
     title: "Food Searching App",
     src: foodapp,
     link: "https://rad-longma-275d13.netlify.app/receipe-of-the-day.html",
@@ -74,7 +85,7 @@ const projects = [
   },
 
   {
-    id: 5,
+    id: 7,
     title: "Shoping App",
     src: shoping,
     link: "https://shoping-cart-add-redux.netlify.app/",
@@ -84,7 +95,7 @@ const projects = [
     techStack: ["React", "React-BootStrap", "Material-UI"],
   },
   {
-    id: 6,
+    id: 8,
     title: "Weather App",
     src: weather,
     link: "https://incredible-frangollo-40a170.netlify.app/",
@@ -95,7 +106,7 @@ const projects = [
   },
 
   {
-    id: 7,
+    id: 9,
     title: "Travelocity",
     src: travellocity,
     link: "https://meek-blancmange-7c0dba.netlify.app/",
