@@ -9,7 +9,7 @@ import zee5 from "../assets/portfolio/zee5.png";
 
 import reactMovieapp from "../assets/portfolio/MovieApp-Redux-React.png";
 
-import projects from './data/projects'
+import projects from "./data/projects";
 
 import { FaReact } from "react-icons/fa";
 import { VscPreview } from "react-icons/vsc";
@@ -28,7 +28,6 @@ const Projects = () => {
       setVisible(6);
     }
   };
-
 
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -58,7 +57,10 @@ const Projects = () => {
               <img src={project.src} alt="#" className="rounded-[16px] duration-300 hover:scale-105 p-2 "></img>
               <div className="p-4">
                 <p className="text-xl text-blue-400 mt-2 font-bold">{project.title}</p>
-                <p className="text-justify">{project.disc}</p>
+                <p className="text-justify">
+                  {project.disc.substring(0, 337)}
+                  {project.disc.length > 337 ? "....ReadMore" : "."}
+                </p>
               </div>
               <div className=" border-white ">
                 <div className="flex justify-center">
@@ -89,7 +91,7 @@ const Projects = () => {
             </div>
           ))}
         </div>
-        {projects.length > 6  && (
+        {projects.length > 6 && (
           <div className="w-50 mx-auto mt-10">
             {visible <= projects.length ? (
               <button
